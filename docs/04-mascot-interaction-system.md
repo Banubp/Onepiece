@@ -1,11 +1,11 @@
 # Banu Mascot Interaction System
 
-Banu wears beige cargo trousers and a green hoodie. The illustration is deliberately graphic and clean rather than sketch-like.
+Banu wears brown-beige cargo trousers and an olive hoodie. The illustration is rendered live on canvas rather than loaded as a static image, allowing the eyes, posture, breathing, typing and mail action to animate independently.
 
 | State | Trigger | Visual behavior |
 |---|---|---|
 | `sleep` | Visitor idle for 7 seconds | Hood up, seated, subtle breathing |
-| `awake` | Pointer, keyboard, touch, or scroll | Hood down, looks toward active content |
+| `awake` | Pointer approaches, keyboard, touch, or scroll | Hood down, pupils track the cursor |
 | `work` | Case study receives hover, focus, or click | Laptop opens and posture becomes focused |
 | `send` | Contact action activates | Paper plane leaves the laptop |
 | `celebrate` | Email action opens | Short approving bounce, then awake |
