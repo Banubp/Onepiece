@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 440" role="img" aria-labelledby="title desc">
+  <title id="title">Banu mascot</title>
+  <desc id="desc">A clean graphic character wearing a green hoodie and beige cargo trousers, sitting with a laptop.</desc>
+  <defs>
+    <linearGradient id="hoodie" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b7ee51"/><stop offset="1" stop-color="#6fae22"/></linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8b4e30"/><stop offset="1" stop-color="#5d301f"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="12"/></filter>
+  </defs>
+  <ellipse cx="185" cy="402" rx="128" ry="22" fill="#05070b" opacity=".38" filter="url(#shadow)"/>
+  <g class="hood-up">
+    <path d="M104 146c-1-69 31-111 79-111s84 42 78 113l-32 17-96-2z" fill="#78b92a"/>
+  </g>
+  <g class="head">
+    <path d="M134 78c9-31 88-31 99 3l-4 75c-8 29-77 31-91 2z" fill="url(#skin)"/>
+    <path d="M132 91c5-50 94-57 103-2-20-18-76-21-103 2z" fill="#11151c"/>
+    <path d="M149 115h24M194 115h24" stroke="#0b0d11" stroke-width="8" stroke-linecap="round"/>
+    <path d="M174 140c8 7 17 7 25 0" fill="none" stroke="#2d1812" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g class="body">
+    <path d="M98 169c15-26 49-36 86-36s75 9 90 38l20 122-213 1z" fill="url(#hoodie)"/>
+    <path d="M166 136l18 24 18-24" fill="none" stroke="#3f6819" stroke-width="5"/>
+    <path d="M121 241h126l-8 57H128z" fill="#55851f" opacity=".5"/>
+  </g>
+  <g class="legs">
+    <path d="M99 285h80l-9 99H68z" fill="#d5b98b"/>
+    <path d="M179 285h82l40 99H190z" fill="#c9aa78"/>
+    <path d="M92 314h51v31H87zM221 316h51l13 31h-58z" fill="#a8895c"/>
+    <path d="M64 379h111v25H55c-12-1-13-17 9-25zM190 379h111c22 8 20 24 8 25H190z" fill="#252c36"/>
+  </g>
+  <g class="laptop">
+    <path d="M112 226h142l-13 94H127z" fill="#3b4653" stroke="#718090" stroke-width="4"/>
+    <path d="M101 320h164l-15 17H116z" fill="#6b7784"/>
+    <circle cx="183" cy="273" r="13" fill="#9cdb3b"/>
+  </g>
+  <g class="plane" fill="#f3efe5">
+    <path d="M254 227l66-29-29 67-10-27z"/>
+  </g>
+</svg>
