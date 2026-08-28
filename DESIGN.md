@@ -16,10 +16,11 @@ Typography uses Instrument Serif for the defining editorial headline, DM Sans fo
 
 ## Layout and motion
 
-- Desktop: framed editorial canvas with the illustrated mascot above the hero headline.
+- Desktop: framed editorial canvas with a 70×70 illustrated mascot above the hero headline.
 - Tablet: 8-column grid with a stacked case-study rhythm.
 - Mobile: single column; the mascot stays above the tagline and never blocks controls.
 - Case studies use full-width horizontal numbered rows with image layering and focused hover motion.
+- The highlighted hero word rotates between design outcomes without changing the headline's layout.
 - One orchestrated intro, followed by restrained reveal motion.
 - `prefers-reduced-motion` removes travel, parallax, and automatic mascot repositioning.
 

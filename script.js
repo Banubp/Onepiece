@@ -4,6 +4,7 @@ const progress = document.querySelector('.page-progress span');
 const menuButton = document.querySelector('.menu-button');
 const nav = document.querySelector('#nav');
 const eyes = mascot.querySelectorAll('.eye');
+const designWord = document.querySelector('#design-word');
 let idleTimer;
 let scrollTimer;
 let previousScroll = 0;
@@ -35,7 +36,7 @@ function wake() {
 function moveEyes(clientX, clientY) {
   const box = mascot.getBoundingClientRect();
   const distance = Math.hypot(clientX - (box.left + box.width / 2), clientY - (box.top + box.height / 2));
-  if (distance < 240 && mascot.dataset.state === 'sleep') setMascot('awake');
+  if (distance < 150 && mascot.dataset.state === 'sleep') setMascot('awake');
 }
 
 function onScroll() {
@@ -133,3 +134,16 @@ document.querySelector('#contact-link').addEventListener('click', () => {
 mascot.dataset.state = 'sleep';
 scheduleSleep();
 onScroll();
+
+if (!reducedMotion && designWord) {
+  const words = ['obvious.', 'intuitive.', 'trustworthy.', 'human.'];
+  let wordIndex = 0;
+  window.setInterval(() => {
+    designWord.classList.add('changing');
+    window.setTimeout(() => {
+      wordIndex = (wordIndex + 1) % words.length;
+      designWord.textContent = words[wordIndex];
+      designWord.classList.remove('changing');
+    }, 240);
+  }, 2600);
+}

@@ -4,7 +4,7 @@
 
 1. Compact navigation and CV action.
 2. Centred editorial hero with the 70×70 Banu mascot above the tagline.
-3. Four-case-study asymmetric card field: Nexa, Booking.com, Soft and Onepiece System.
+3. Six full-width case-study rows: Nexa, Booking.com, Soft, Onepiece System, Echo and Spine.
 4. Six selected project cards.
 5. Work-experience timeline and About/CV block.
 6. Contact close with mascot send state.

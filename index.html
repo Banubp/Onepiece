@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <script type="module" src="script.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -32,12 +32,11 @@
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero-content reveal">
         <button class="hero-mascot" type="button" data-state="sleep" aria-label="Wake Banu, the interactive portfolio mascot"><span aria-hidden="true"></span></button>
-        <p class="mascot-note" aria-hidden="true">← move your cursor near me</p>
-        <h1 id="hero-title">I design products<br>that make complicated<br>things feel <em>obvious.</em></h1>
+        <h1 id="hero-title">I design products<br>that make complicated<br>things feel <em id="design-word">obvious.</em></h1>
         <p class="hero-summary">Hi, I’m Banuprakash. A product designer and MSc Advanced CS student<br>who enjoys turning complexity into clarity—one thoughtful interaction at a time.</p>
         <p class="hero-current"><span>→</span> Currently designing at the intersection of fintech, travel, and intelligence.</p>
       </div>
-      <aside class="hero-note reveal"><span>01 / 06</span><p>Chai &gt; Coffee.<br>Midnight designer,<br>early morning runner.</p></aside>
+      <aside class="hero-note reveal"><span>Scroll ↓</span><p>Coffee, always.<br>Midnight designer,<br>early morning runner.</p></aside>
     </section>
 
     <section class="case-section section" id="case-studies" aria-labelledby="case-title">
@@ -62,6 +61,16 @@
         <article class="case-card case-system reveal" data-accent="#1c776b" data-project="Onepiece system"><span class="case-side">Selected Work</span><strong class="case-number">4</strong>
           <div class="concept-visual system-visual" aria-hidden="true"><div class="token token-a">Aa</div><div class="token token-b">70px</div><div class="token token-c">#5746E8</div><div class="component-sample">View project ↗</div></div>
           <div class="case-copy"><p class="case-meta">Portfolio · Design system · 2026</p><h3>Onepiece System</h3><p class="case-thesis">The design system, interaction language and mascot logic behind this portfolio.</p><div class="case-facts"><span><b>Role</b> Designer & builder</span><span><b>Focus</b> Identity through behavior</span></div><button class="case-action" data-dialog="system-dialog">View case study <span>↗</span></button></div>
+        </article>
+
+        <article class="case-card case-echo reveal" data-accent="#6847e8" data-project="Echo"><span class="case-side">Selected Work</span><strong class="case-number">5</strong>
+          <div class="case-copy"><p class="case-meta">AI systems · Product architecture · 2026</p><h3>Echo</h3><p class="case-thesis">A multi-agent personal assistant that turns one short intent into coordinated, evidence-backed action.</p><div class="case-facts"><span><b>Role</b> Product architect</span><span><b>Focus</b> Trustworthy autonomy</span></div><button class="case-action" data-dialog="echo-dialog">View case study <span>↗</span></button></div>
+          <div class="concept-visual echo-visual" aria-hidden="true"><div class="echo-core">Intent</div><div class="echo-node n1">Calendar</div><div class="echo-node n2">Cinema</div><div class="echo-node n3">Budget</div><div class="echo-node n4">Approval</div></div>
+        </article>
+
+        <article class="case-card case-spine reveal" data-accent="#11110f" data-project="Spine"><span class="case-side">Selected Work</span><strong class="case-number">6</strong>
+          <div class="case-copy"><p class="case-meta">Research system · Decision intelligence · 2026</p><h3>Spine</h3><p class="case-thesis">A product-agnostic reasoning system for exposing mechanisms, leaks and weak assumptions before teams intervene.</p><div class="case-facts"><span><b>Role</b> Framework designer</span><span><b>Focus</b> Evidence & decisions</span></div><button class="case-action" data-dialog="spine-dialog">View case study <span>↗</span></button></div>
+          <div class="concept-visual spine-visual" aria-hidden="true"><div class="spine-axis"><span>Evidence</span><span>Mechanism</span><span>Leak</span><span>Decision</span></div><div class="spine-score">61<small>principles</small></div></div>
         </article>
       </div>
     </section>
@@ -103,5 +112,7 @@
   <dialog id="booking-dialog" class="case-dialog"><button class="dialog-close" aria-label="Close case study">×</button><p class="case-meta">Booking.com · Travel redesign</p><h2>One trip, not five bookings</h2><div class="dialog-grid"><section><h3>Problem</h3><p>Travellers experience one journey, while the product splits discovery, stays, experiences, checkout and post-booking into disconnected decisions.</p></section><section><h3>Product move</h3><p>Create a personalised, journey-aware system for business travellers and luxury explorers that preserves context across the trip.</p></section><section><h3>Key interactions</h3><p>Destination previews, enhanced search, curated experiences, responsive patterns, hover feedback and animated continuity.</p></section><section><h3>Contribution</h3><p>Journey mapping, information architecture, interaction design, responsive design system, prototyping and usability reasoning.</p></section></div></dialog>
   <dialog id="soft-dialog" class="case-dialog"><button class="dialog-close" aria-label="Close case study">×</button><p class="case-meta">Soft · Mental-health product</p><h2>Support without pressure</h2><div class="dialog-grid"><section><h3>Problem</h3><p>Mental-health tools can feel clinical, demanding or unsafe at exactly the moment a person needs low-friction support.</p></section><section><h3>Direction</h3><p>A soft visual and conversational system that prioritises emotional safety, privacy, calm check-ins and progressive disclosure.</p></section><section><h3>Principle</h3><p>Never turn care into performance. The product supports reflection without guilt, streak pressure or visual overload.</p></section><section><h3>Contribution</h3><p>Research framing, emotional journey, information architecture, interface direction, illustration and interaction concepts.</p></section></div></dialog>
   <dialog id="system-dialog" class="case-dialog"><button class="dialog-close" aria-label="Close case study">×</button><p class="case-meta">Onepiece · Portfolio system</p><h2>Identity through behavior</h2><div class="dialog-grid"><section><h3>Problem</h3><p>Many designer portfolios look like polished marketing sites but do not demonstrate interaction thinking or a repeatable system.</p></section><section><h3>System</h3><p>A light editorial hierarchy, reusable case and project structures, semantic tokens and a 70×70 interactive mascot.</p></section><section><h3>Mascot logic</h3><p>Awake on entry, follows pointer and scroll, works on project focus, sleeps after inactivity and sends a plane when contact opens.</p></section><section><h3>Contribution</h3><p>Workflow, IA, wireframes, visual system, interaction specification, accessible implementation and browser QA.</p></section></div></dialog>
+  <dialog id="echo-dialog" class="case-dialog"><button class="dialog-close" aria-label="Close case study">×</button><p class="case-meta">Echo · AI systems case study</p><h2>One intent, coordinated action</h2><div class="dialog-grid"><section><h3>Problem</h3><p>Everyday plans are scattered across calendars, websites, subscriptions and approvals. Most assistants answer questions but leave the coordination to the user.</p></section><section><h3>Product move</h3><p>Translate a short intent into parallel specialist tasks, combine their evidence, detect conflicts and pause irreversible actions behind a clear approval gate.</p></section><section><h3>System</h3><p>Calendar, cinema, subscription and booking adapters share a deterministic plan, evidence model and persistent run history.</p></section><section><h3>Contribution</h3><p>Product architecture, orchestration model, conflict UX, approval design, evaluation scenarios and implementation direction.</p></section></div></dialog>
+  <dialog id="spine-dialog" class="case-dialog"><button class="dialog-close" aria-label="Close case study">×</button><p class="case-meta">Spine · Research system</p><h2>Intervene only after understanding</h2><div class="dialog-grid"><section><h3>Problem</h3><p>Teams often jump from a visible symptom to a familiar solution without separating competing explanations or checking the mechanism underneath.</p></section><section><h3>Framework</h3><p>Spine maps evidence through mechanisms, links, leaks and inversions, then runs a six-pass audit before recommending intervention.</p></section><section><h3>Decision discipline</h3><p>Each hypothesis receives explicit confidence, supporting and contradicting evidence, missing evidence and predicted observations.</p></section><section><h3>Contribution</h3><p>61-principle library, 12 mechanisms, audit engine, five-gate Forge, severity instruments and a compounding learning loop.</p></section></div></dialog>
 </body>
 </html>

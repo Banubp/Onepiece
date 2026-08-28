@@ -25,6 +25,14 @@ A calm, private mental-health companion focused on emotional safety, progressive
 
 The portfolio itself documents tokens, responsive behavior, interaction states, and the Banu mascot as a reusable identity system.
 
+### Echo
+
+A multi-agent personal assistant that coordinates calendars, cinema, subscriptions and booking through evidence, conflict detection and explicit approval gates.
+
+### Spine
+
+A product-agnostic decision framework with a 61-principle library, 12 mechanisms, a six-pass audit engine and a five-gate Forge for disciplined interventions.
+
 ## Selected projects
 
 Hobby Ghar, CTF Platform, Job & Skill, Molly.CO, MedTrack and Solar.
