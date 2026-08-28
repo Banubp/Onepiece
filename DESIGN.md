@@ -6,22 +6,20 @@ The portfolio should feel like meeting the designer at his desk, not browsing a 
 
 ## Visual system
 
-- Canvas: Lavender Mist `#f1f0ff`
-- Surface: Warm Paper `#fffefb`
-- Primary text: Ink `#171629`
-- Muted text: Slate `#69677a`
-- Signature: Iris `#5746e8`
-- Warm counterpoint: Coral `#ff806f`
-- Focus: Deep Teal `#1a7872`
+- Canvas: Natural Paper `#f5f2eb`
+- Primary text: Ink `#11110f`
+- Muted text: Graphite `#5f5d59`
+- Signature: Pen Purple `#6847e8`
+- Annotation: Editor Red `#df4e2d`
 
-Typography uses Manrope for oversized editorial headlines and DM Sans for body and utility text. The direction is a new light editorial system informed by the supplied Dribbble references: generous spacing, central character focus, layered cards and a structured CV narrative. It does not inherit the legacy portfolio's styling or layout.
+Typography uses Instrument Serif for the defining editorial headline, DM Sans for readable body copy and DM Mono for annotations and product metadata. The attached approved design is the visual source of truth. Dribbble references contribute only transferable ideas for motion, hierarchy and polish. The legacy portfolio contributes content only.
 
 ## Layout and motion
 
-- Desktop: 12-column editorial grid, content within 1240px, mascot centred above the hero tagline.
+- Desktop: framed editorial canvas with the illustrated mascot above the hero headline.
 - Tablet: 8-column grid with a stacked case-study rhythm.
 - Mobile: single column; the mascot stays above the tagline and never blocks controls.
-- Case studies use an asymmetric 7/5 card composition and collapse into a clear reading sequence.
+- Case studies use full-width horizontal numbered rows with image layering and focused hover motion.
 - One orchestrated intro, followed by restrained reveal motion.
 - `prefers-reduced-motion` removes travel, parallax, and automatic mascot repositioning.
 

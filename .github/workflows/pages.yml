@@ -22,7 +22,7 @@ jobs:
           test -s index.html
           test -s styles.css
           test -s script.js
-          test -s assets/mascot-banu.svg
+          test -s assets/banu-mascot-states.png
       - name: Check internal asset references
         run: |
           grep -q 'class="hero-mascot"' index.html

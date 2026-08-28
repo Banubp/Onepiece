@@ -8,7 +8,7 @@
   <title>Banu Prakash — Product Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
@@ -18,66 +18,48 @@
   <div class="page-progress" aria-hidden="true"><span></span></div>
 
   <header class="header">
-    <a class="wordmark" href="#top"><span>BP</span><b>Banu Prakash</b></a>
+    <a class="wordmark" href="#top"><b>Banuprakash Nammithi</b><span>Product Designer · MSc Advanced CS</span></a>
     <button class="menu-button" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" aria-label="Primary navigation">
-      <a href="#case-studies">Case studies</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
+      <a href="#case-studies">Work</a>
       <a href="#about">About</a>
+      <a href="#experience">Notes</a>
       <a href="#contact">Contact</a>
-      <a class="cv-link" href="assets/Banuprakash-Nammithi-CV.pdf" target="_blank" rel="noreferrer">CV ↗</a>
     </nav>
   </header>
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero-content reveal">
-        <button class="hero-mascot" type="button" data-state="awake" aria-label="Meet Banu, the interactive portfolio mascot">
-          <svg viewBox="0 0 70 70" aria-hidden="true">
-            <ellipse class="shadow" cx="35" cy="64" rx="22" ry="4"/>
-            <g class="body">
-              <path class="hood-up" d="M21 29C20 13 26 6 35 6s15 7 14 23l-7 5H27z"/>
-              <circle class="face" cx="35" cy="22" r="11"/>
-              <path class="hair" d="M24 21c1-12 20-13 22 0-5-5-16-6-22 0z"/>
-              <circle class="eye eye-left" cx="31" cy="23" r="1.4"/><circle class="eye eye-right" cx="40" cy="23" r="1.4"/>
-              <path class="smile" d="M32 28c2 2 4 2 6 0"/>
-              <path class="hoodie" d="M18 36c3-8 30-8 34 0l3 19H15z"/>
-              <path class="cargo cargo-left" d="M21 53h14l-2 12H17z"/><path class="cargo cargo-right" d="M35 53h14l5 12H37z"/>
-              <path class="arm" d="M22 39l-8 10"/><path class="wave-arm" d="M48 39l8-11"/>
-              <g class="laptop"><path d="M23 43h25l-2 15H25z"/><circle cx="35.5" cy="50" r="2"/></g>
-            </g>
-            <path class="mail-plane" d="M49 43l17-8-7 17-3-7z"/>
-          </svg>
-        </button>
-        <p class="hero-kicker"><span></span> Product designer · UI/UX · Frontend-aware</p>
-        <h1 id="hero-title">I design products people <em>understand, trust,</em> and want to use.</h1>
-        <p class="hero-summary">I’m Banu Prakash, a product designer with 2+ years of experience turning research, complex systems and business goals into clear mobile and web experiences.</p>
-        <div class="hero-actions"><a class="button primary" href="#case-studies">Explore my work</a><a class="button quiet" href="#about">About me ↓</a></div>
+        <button class="hero-mascot" type="button" data-state="sleep" aria-label="Wake Banu, the interactive portfolio mascot"><span aria-hidden="true"></span></button>
+        <p class="mascot-note" aria-hidden="true">← move your cursor near me</p>
+        <h1 id="hero-title">I design products<br>that make complicated<br>things feel <em>obvious.</em></h1>
+        <p class="hero-summary">Hi, I’m Banuprakash. A product designer and MSc Advanced CS student<br>who enjoys turning complexity into clarity—one thoughtful interaction at a time.</p>
+        <p class="hero-current"><span>→</span> Currently designing at the intersection of fintech, travel, and intelligence.</p>
       </div>
-      <div class="hero-footer reveal"><span>Based in the United Kingdom</span><span>Available for product design opportunities</span><span>Scroll to make Banu move ↓</span></div>
+      <aside class="hero-note reveal"><span>01 / 06</span><p>Chai &gt; Coffee.<br>Midnight designer,<br>early morning runner.</p></aside>
     </section>
 
     <section class="case-section section" id="case-studies" aria-labelledby="case-title">
       <header class="section-intro reveal"><p class="section-label">01 / Case studies</p><h2 id="case-title">The work behind<br><em>the screens.</em></h2><p>Four focused stories showing how I frame problems, make product decisions and build coherent experiences.</p></header>
 
       <div class="case-list">
-        <article class="case-card case-nexa reveal" data-accent="#8f63ff" data-project="Nexa">
+        <article class="case-card case-nexa reveal" data-accent="#6847e8" data-project="Nexa"><span class="case-side">Selected Work</span><strong class="case-number">1</strong>
           <div class="case-copy"><p class="case-meta">Fintech · Product strategy · 2026</p><h3>Nexa</h3><p class="case-thesis">An Indian UPI experience designed around confidence, not only transaction speed.</p><div class="case-facts"><span><b>Role</b> Product Designer</span><span><b>Focus</b> Trust & money psychology</span></div><button class="case-action" data-dialog="nexa-dialog">View case study <span>↗</span></button></div>
           <div class="nexa-devices case-media"><img src="assets/projects/nexa/safe-to-spend.png" alt="Nexa Safe to Spend screen"><img src="assets/projects/nexa/home.png" alt="Nexa home screen"><img src="assets/projects/nexa/ai-coach.png" alt="Nexa AI coach screen"></div>
         </article>
 
-        <article class="case-card case-booking reveal" data-accent="#4aa3ff" data-project="Booking.com">
+        <article class="case-card case-booking reveal" data-accent="#235cdd" data-project="Booking.com"><span class="case-side">Selected Work</span><strong class="case-number">2</strong>
           <div class="case-media booking-stack"><img src="assets/projects/booking/explorer-home.jpg" alt="Booking.com redesigned travel discovery"><img src="assets/projects/booking/property.jpg" alt="Booking.com redesigned property page"></div>
           <div class="case-copy"><p class="case-meta">Travel · Service redesign · 2026</p><h3>Booking.com</h3><p class="case-thesis">Turning fragmented searches and bookings into one personalised travel journey.</p><div class="case-facts"><span><b>Role</b> Product Designer</span><span><b>Focus</b> Journey continuity</span></div><button class="case-action" data-dialog="booking-dialog">View case study <span>↗</span></button></div>
         </article>
 
-        <article class="case-card case-soft reveal" data-accent="#ffb3aa" data-project="Soft">
+        <article class="case-card case-soft reveal" data-accent="#db6048" data-project="Soft"><span class="case-side">Selected Work</span><strong class="case-number">3</strong>
           <div class="case-copy"><p class="case-meta">Mental health · Mobile product</p><h3>Soft</h3><p class="case-thesis">A calm, private mental-health companion designed to feel supportive without becoming clinical or overwhelming.</p><div class="case-facts"><span><b>Role</b> UI/UX Designer</span><span><b>Focus</b> Trust & emotional safety</span></div><button class="case-action" data-dialog="soft-dialog">View case study <span>↗</span></button></div>
           <div class="concept-visual soft-visual" aria-hidden="true"><div class="soft-orbit one"></div><div class="soft-orbit two"></div><div class="soft-phone"><span>How are you<br>feeling today?</span><i></i><i></i><i></i></div></div>
         </article>
 
-        <article class="case-card case-system reveal" data-accent="#a7e342" data-project="Onepiece system">
+        <article class="case-card case-system reveal" data-accent="#1c776b" data-project="Onepiece system"><span class="case-side">Selected Work</span><strong class="case-number">4</strong>
           <div class="concept-visual system-visual" aria-hidden="true"><div class="token token-a">Aa</div><div class="token token-b">70px</div><div class="token token-c">#5746E8</div><div class="component-sample">View project ↗</div></div>
           <div class="case-copy"><p class="case-meta">Portfolio · Design system · 2026</p><h3>Onepiece System</h3><p class="case-thesis">The design system, interaction language and mascot logic behind this portfolio.</p><div class="case-facts"><span><b>Role</b> Designer & builder</span><span><b>Focus</b> Identity through behavior</span></div><button class="case-action" data-dialog="system-dialog">View case study <span>↗</span></button></div>
         </article>

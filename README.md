@@ -8,7 +8,7 @@ An original, interaction-led product design portfolio for Banu Prakash Nammithi.
 - `index.html` — accessible single-page portfolio
 - `styles.css` — responsive design system and motion
 - `script.js` — navigation, reveals, mascot states, and contact flow
-- inline SVG — original 70×70 Banu mascot with interaction states
+- `assets/banu-mascot-states.png` — original hand-drawn Banu mascot state sheet
 - `assets/projects/` — selected project media reused only as portfolio content
 - `docs/` — workflow, IA, wireframes, mascot system, and content inventory
 - `DESIGN.md` — durable visual and interaction direction
@@ -16,7 +16,8 @@ An original, interaction-led product design portfolio for Banu Prakash Nammithi.
 ## Run locally
 
 ```bash
-python3 -m http.server 4173
+npm install
+npm run dev
 ```
 
 Visit `http://localhost:4173`.

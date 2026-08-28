@@ -33,11 +33,9 @@ function wake() {
 }
 
 function moveEyes(clientX, clientY) {
-  if (reducedMotion || mascot.dataset.state === 'sleep') return;
   const box = mascot.getBoundingClientRect();
-  const x = Math.max(-1.5, Math.min(1.5, (clientX - (box.left + box.width / 2)) / 45));
-  const y = Math.max(-1.2, Math.min(1.2, (clientY - (box.top + box.height / 2)) / 45));
-  eyes.forEach(eye => { eye.style.translate = `${x}px ${y}px`; });
+  const distance = Math.hypot(clientX - (box.left + box.width / 2), clientY - (box.top + box.height / 2));
+  if (distance < 240 && mascot.dataset.state === 'sleep') setMascot('awake');
 }
 
 function onScroll() {
@@ -56,7 +54,7 @@ function onScroll() {
 
 mascot.addEventListener('mouseenter', () => setMascot('wave', 1700));
 mascot.addEventListener('click', () => setMascot('celebrate', 850));
-window.addEventListener('pointermove', event => { moveEyes(event.clientX, event.clientY); wake(); }, {passive:true});
+window.addEventListener('pointermove', event => { moveEyes(event.clientX, event.clientY); scheduleSleep(); }, {passive:true});
 window.addEventListener('keydown', wake);
 window.addEventListener('touchstart', wake, {passive:true});
 window.addEventListener('scroll', onScroll, {passive:true});
@@ -132,5 +130,6 @@ document.querySelector('#contact-link').addEventListener('click', () => {
   }, 900);
 });
 
-wake();
+mascot.dataset.state = 'sleep';
+scheduleSleep();
 onScroll();
