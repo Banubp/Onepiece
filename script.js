@@ -5,6 +5,7 @@ const menuButton = document.querySelector('.menu-button');
 const nav = document.querySelector('#nav');
 const mascotCanvas = mascot.querySelector('canvas');
 const mascotContext = mascotCanvas.getContext('2d');
+const mascotDirectionFrames = [...mascot.querySelectorAll('.mascot-direction')];
 const designWord = document.querySelector('#design-word');
 let idleTimer;
 let scrollTimer;
@@ -13,6 +14,12 @@ let lockedState = false;
 let eyeTarget = {x: 0, y: 0};
 let eyePosition = {x: 0, y: 0};
 let mascotStateStarted = performance.now();
+const directionTarget = {x:0,y:0};
+const directionPosition = {x:0,y:0};
+const directionVectors = [
+  {x:-.25,y:0}, {x:-1,y:0}, {x:-.7,y:-.7}, {x:0,y:-1},
+  {x:.7,y:-.7}, {x:1,y:0}, {x:.7,y:.7}, {x:-.7,y:.7}
+];
 
 const mascotPalette = {ink:'#20211f',skin:'#d7a47f',olive:'#66724d',oliveDark:'#4f593c',cargo:'#b58b59',cargoDark:'#8e6d48',paper:'#f5f2eb',purple:'#6847e8'};
 
@@ -125,8 +132,35 @@ function moveEyes(clientX, clientY) {
   const distance = Math.hypot(clientX - (box.left + box.width / 2), clientY - (box.top + box.height / 2));
   eyeTarget.x = Math.max(-1.4, Math.min(1.4, (clientX - (box.left + box.width / 2)) / 42));
   eyeTarget.y = Math.max(-1, Math.min(1, (clientY - (box.top + box.height / 2)) / 42));
+  const dx = clientX - (box.left + box.width / 2);
+  const dy = clientY - (box.top + box.height / 2);
+  const length = Math.max(90, Math.hypot(dx, dy));
+  directionTarget.x = Math.max(-1, Math.min(1, dx / length));
+  directionTarget.y = Math.max(-1, Math.min(1, dy / length));
   if (distance < 150 && mascot.dataset.state === 'sleep') setMascot('awake');
 }
+
+function renderDirectionFrames() {
+  directionPosition.x += (directionTarget.x - directionPosition.x) * .085;
+  directionPosition.y += (directionTarget.y - directionPosition.y) * .085;
+  const strength = Math.hypot(directionPosition.x, directionPosition.y);
+
+  if (!reducedMotion && strength > .08) {
+    const x = directionPosition.x / strength;
+    const y = directionPosition.y / strength;
+    const scores = directionVectors.map((vector,index) => ({index,score:x*vector.x+y*vector.y})).sort((a,b) => b.score-a.score);
+    const spread = Math.max(.08,scores[0].score-scores[1].score);
+    const blend = Math.max(0,Math.min(.32,.32-spread));
+    mascotDirectionFrames.forEach((frame,index) => {
+      frame.style.opacity = index === scores[0].index ? String(1-blend) : index === scores[1].index ? String(blend) : '0';
+    });
+  } else {
+    mascotDirectionFrames.forEach((frame,index) => { frame.style.opacity = index === 0 ? '1' : '0'; });
+  }
+  requestAnimationFrame(renderDirectionFrames);
+}
+
+requestAnimationFrame(renderDirectionFrames);
 
 function onScroll() {
   const max = document.documentElement.scrollHeight - innerHeight;
