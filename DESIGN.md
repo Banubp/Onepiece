@@ -6,22 +6,22 @@ The portfolio should feel like meeting the designer at his desk, not browsing a 
 
 ## Visual system
 
-- Canvas: Ink Navy `#0c1017`
-- Surface: Deck `#151c25`
-- Primary text: Paper `#f3efe5`
-- Muted text: Fog `#a8b0bd`
-- Signature: Hoodie Green `#9cdb3b`
-- Warm counterpoint: Cargo Sand `#d5b98b`
-- Focus: Signal Cyan `#75e6da`
+- Canvas: Lavender Mist `#f1f0ff`
+- Surface: Warm Paper `#fffefb`
+- Primary text: Ink `#171629`
+- Muted text: Slate `#69677a`
+- Signature: Iris `#5746e8`
+- Warm counterpoint: Coral `#ff806f`
+- Focus: Deep Teal `#1a7872`
 
-Typography uses Space Grotesk for expressive headlines and Inter for body and utility text, with robust system fallbacks. The signature composition is the desk-edge guide: the mascot occupies a quiet side rail and changes posture according to visitor intent.
+Typography uses Manrope for oversized editorial headlines and DM Sans for body and utility text. The direction is a new light editorial system informed by the supplied Dribbble references: generous spacing, central character focus, layered cards and a structured CV narrative. It does not inherit the legacy portfolio's styling or layout.
 
 ## Layout and motion
 
-- Desktop: 12-column editorial grid, content within 1200px, persistent mascot rail.
-- Tablet: 8-column grid; mascot becomes a floating companion.
-- Mobile: single column; mascot docks above the bottom safe area and never blocks controls.
-- Case studies alternate editorial layouts instead of repeating identical cards.
+- Desktop: 12-column editorial grid, content within 1240px, mascot centred above the hero tagline.
+- Tablet: 8-column grid with a stacked case-study rhythm.
+- Mobile: single column; the mascot stays above the tagline and never blocks controls.
+- Case studies use an asymmetric 7/5 card composition and collapse into a clear reading sequence.
 - One orchestrated intro, followed by restrained reveal motion.
 - `prefers-reduced-motion` removes travel, parallax, and automatic mascot repositioning.
 

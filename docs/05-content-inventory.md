@@ -17,9 +17,23 @@ A Monzo-inspired Indian UPI concept shaped around Indian money behavior, with sa
 
 A product redesign exploring fragmented travel planning and the movement from isolated bookings toward a connected trip journey.
 
+### Soft
+
+A calm, private mental-health companion focused on emotional safety, progressive disclosure and support without streak pressure.
+
 ### Onepiece design system
 
 The portfolio itself documents tokens, responsive behavior, interaction states, and the Banu mascot as a reusable identity system.
+
+## Selected projects
+
+Hobby Ghar, CTF Platform, Job & Skill, Molly.CO, MedTrack and Solar.
+
+## Verified experience
+
+- Hobbyghar — Product Designer (UI/UX), Dec 2024–Dec 2025
+- ADM Education & Welfare Society — UI/UX Designer, May 2024–Jul 2024
+- Spillmate — Product Designer, Jul 2023–Apr 2024
 
 ## Boundary
 

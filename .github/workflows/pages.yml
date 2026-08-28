@@ -25,6 +25,8 @@ jobs:
           test -s assets/mascot-banu.svg
       - name: Check internal asset references
         run: |
-          grep -q 'assets/mascot-banu.svg' index.html
+          grep -q 'class="hero-mascot"' index.html
           grep -q 'assets/projects/nexa/home.png' index.html
           grep -q 'assets/projects/booking/explorer-home.jpg' index.html
+          test "$(grep -o 'class="case-card' index.html | wc -l)" -eq 4
+          test "$(grep -o 'class="project-tile' index.html | wc -l)" -eq 6

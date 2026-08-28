@@ -3,98 +3,123 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Banu Prakash is a product designer turning complex systems into calm, human journeys.">
-  <meta name="theme-color" content="#0c1017">
+  <meta name="description" content="Banu Prakash — product designer creating thoughtful digital products, design systems and AI-native experiences.">
+  <meta name="theme-color" content="#f1f0ff">
   <title>Banu Prakash — Product Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="progress" aria-hidden="true"><span></span></div>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Banu Prakash, home"><span>BP</span> Banu Prakash</a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" aria-label="Primary navigation">
-      <a href="#work">Work</a><a href="#practice">Practice</a><a href="#about">About</a><a href="#contact">Contact</a>
-      <a class="nav-cv" href="assets/Banuprakash-Nammithi-CV.pdf" target="_blank" rel="noreferrer">CV ↗</a>
+  <div class="page-progress" aria-hidden="true"><span></span></div>
+
+  <header class="header">
+    <a class="wordmark" href="#top"><span>BP</span><b>Banu Prakash</b></a>
+    <button class="menu-button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Primary navigation">
+      <a href="#case-studies">Case studies</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="cv-link" href="assets/Banuprakash-Nammithi-CV.pdf" target="_blank" rel="noreferrer">CV ↗</a>
     </nav>
   </header>
 
-  <aside class="mascot-rail" aria-hidden="true">
-    <div class="mascot" data-state="awake"><span class="mascot-label">Banu is here</span><img src="assets/mascot-banu.svg" alt=""></div>
-  </aside>
-
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><span></span> Product designer · United Kingdom</p>
-        <h1 id="hero-title">I turn tangled systems into <em>calm journeys.</em></h1>
-        <p class="hero-intro">I’m Banu—a product and UI/UX designer connecting research, interaction design, systems thinking, and frontend craft.</p>
-        <div class="hero-actions"><a class="button primary" href="#work">See selected work</a><a class="button text" href="#about">Meet the designer <span>↓</span></a></div>
+      <div class="hero-content reveal">
+        <button class="hero-mascot" type="button" data-state="awake" aria-label="Meet Banu, the interactive portfolio mascot">
+          <svg viewBox="0 0 70 70" aria-hidden="true">
+            <ellipse class="shadow" cx="35" cy="64" rx="22" ry="4"/>
+            <g class="body">
+              <path class="hood-up" d="M21 29C20 13 26 6 35 6s15 7 14 23l-7 5H27z"/>
+              <circle class="face" cx="35" cy="22" r="11"/>
+              <path class="hair" d="M24 21c1-12 20-13 22 0-5-5-16-6-22 0z"/>
+              <circle class="eye eye-left" cx="31" cy="23" r="1.4"/><circle class="eye eye-right" cx="40" cy="23" r="1.4"/>
+              <path class="smile" d="M32 28c2 2 4 2 6 0"/>
+              <path class="hoodie" d="M18 36c3-8 30-8 34 0l3 19H15z"/>
+              <path class="cargo cargo-left" d="M21 53h14l-2 12H17z"/><path class="cargo cargo-right" d="M35 53h14l5 12H37z"/>
+              <path class="arm" d="M22 39l-8 10"/><path class="wave-arm" d="M48 39l8-11"/>
+              <g class="laptop"><path d="M23 43h25l-2 15H25z"/><circle cx="35.5" cy="50" r="2"/></g>
+            </g>
+            <path class="mail-plane" d="M49 43l17-8-7 17-3-7z"/>
+          </svg>
+        </button>
+        <p class="hero-kicker"><span></span> Product designer · UI/UX · Frontend-aware</p>
+        <h1 id="hero-title">I design products people <em>understand, trust,</em> and want to use.</h1>
+        <p class="hero-summary">I’m Banu Prakash, a product designer with 2+ years of experience turning research, complex systems and business goals into clear mobile and web experiences.</p>
+        <div class="hero-actions"><a class="button primary" href="#case-studies">Explore my work</a><a class="button quiet" href="#about">About me ↓</a></div>
       </div>
-      <div class="hero-note reveal"><span>Currently exploring</span><strong>AI-native products, fintech trust, and interaction-led portfolios.</strong></div>
+      <div class="hero-footer reveal"><span>Based in the United Kingdom</span><span>Available for product design opportunities</span><span>Scroll to make Banu move ↓</span></div>
     </section>
 
-    <section class="work section" id="work" aria-labelledby="work-title">
-      <div class="section-heading reveal"><p class="eyebrow">Selected work</p><h2 id="work-title">Products designed around the moment people hesitate.</h2></div>
+    <section class="case-section section" id="case-studies" aria-labelledby="case-title">
+      <header class="section-intro reveal"><p class="section-label">01 / Case studies</p><h2 id="case-title">The work behind<br><em>the screens.</em></h2><p>Four focused stories showing how I frame problems, make product decisions and build coherent experiences.</p></header>
 
-      <article class="project project-nexa reveal" tabindex="0" data-project="nexa">
-        <div class="project-copy">
-          <p class="project-index">01 · Fintech / Product design</p><h3>Nexa</h3>
-          <p class="project-lead">Reframing Indian UPI around confidence—not just transaction speed.</p>
-          <p>Nexa turns balances into useful decisions with Safe-to-Spend, shared finance, subscription visibility, and contextual AI guidance.</p>
-          <ul class="tags" aria-label="Nexa skills"><li>Research</li><li>Product strategy</li><li>UX psychology</li><li>Design system</li></ul>
-          <button class="project-action" data-dialog="nexa-dialog">Read the project story <span>↗</span></button>
-        </div>
-        <div class="project-visual nexa-visual" aria-label="Nexa mobile app screens">
-          <img src="assets/projects/nexa/safe-to-spend.png" alt="Nexa Safe to Spend screen" loading="lazy">
-          <img src="assets/projects/nexa/home.png" alt="Nexa home screen" loading="lazy">
-          <img src="assets/projects/nexa/ai-coach.png" alt="Nexa AI coach screen" loading="lazy">
-        </div>
-      </article>
+      <div class="case-list">
+        <article class="case-card case-nexa reveal" data-accent="#8f63ff" data-project="Nexa">
+          <div class="case-copy"><p class="case-meta">Fintech · Product strategy · 2026</p><h3>Nexa</h3><p class="case-thesis">An Indian UPI experience designed around confidence, not only transaction speed.</p><div class="case-facts"><span><b>Role</b> Product Designer</span><span><b>Focus</b> Trust & money psychology</span></div><button class="case-action" data-dialog="nexa-dialog">View case study <span>↗</span></button></div>
+          <div class="nexa-devices case-media"><img src="assets/projects/nexa/safe-to-spend.png" alt="Nexa Safe to Spend screen"><img src="assets/projects/nexa/home.png" alt="Nexa home screen"><img src="assets/projects/nexa/ai-coach.png" alt="Nexa AI coach screen"></div>
+        </article>
 
-      <article class="project project-booking reveal" tabindex="0" data-project="booking">
-        <div class="project-visual booking-visual"><img src="assets/projects/booking/explorer-home.jpg" alt="Booking.com redesign explorer screen" loading="lazy"><img src="assets/projects/booking/property.jpg" alt="Booking.com redesigned property experience" loading="lazy"></div>
-        <div class="project-copy">
-          <p class="project-index">02 · Travel / Service redesign</p><h3>Booking.com</h3>
-          <p class="project-lead">Moving travel planning from disconnected bookings to one coherent journey.</p>
-          <p>The redesign connects discovery, stays, experiences, and checkout while reducing the uncertainty that builds between each decision.</p>
-          <ul class="tags" aria-label="Booking.com skills"><li>Journey mapping</li><li>IA</li><li>Prototyping</li><li>Usability</li></ul>
-          <button class="project-action" data-dialog="booking-dialog">Read the project story <span>↗</span></button>
-        </div>
-      </article>
+        <article class="case-card case-booking reveal" data-accent="#4aa3ff" data-project="Booking.com">
+          <div class="case-media booking-stack"><img src="assets/projects/booking/explorer-home.jpg" alt="Booking.com redesigned travel discovery"><img src="assets/projects/booking/property.jpg" alt="Booking.com redesigned property page"></div>
+          <div class="case-copy"><p class="case-meta">Travel · Service redesign · 2026</p><h3>Booking.com</h3><p class="case-thesis">Turning fragmented searches and bookings into one personalised travel journey.</p><div class="case-facts"><span><b>Role</b> Product Designer</span><span><b>Focus</b> Journey continuity</span></div><button class="case-action" data-dialog="booking-dialog">View case study <span>↗</span></button></div>
+        </article>
+
+        <article class="case-card case-soft reveal" data-accent="#ffb3aa" data-project="Soft">
+          <div class="case-copy"><p class="case-meta">Mental health · Mobile product</p><h3>Soft</h3><p class="case-thesis">A calm, private mental-health companion designed to feel supportive without becoming clinical or overwhelming.</p><div class="case-facts"><span><b>Role</b> UI/UX Designer</span><span><b>Focus</b> Trust & emotional safety</span></div><button class="case-action" data-dialog="soft-dialog">View case study <span>↗</span></button></div>
+          <div class="concept-visual soft-visual" aria-hidden="true"><div class="soft-orbit one"></div><div class="soft-orbit two"></div><div class="soft-phone"><span>How are you<br>feeling today?</span><i></i><i></i><i></i></div></div>
+        </article>
+
+        <article class="case-card case-system reveal" data-accent="#a7e342" data-project="Onepiece system">
+          <div class="concept-visual system-visual" aria-hidden="true"><div class="token token-a">Aa</div><div class="token token-b">70px</div><div class="token token-c">#5746E8</div><div class="component-sample">View project ↗</div></div>
+          <div class="case-copy"><p class="case-meta">Portfolio · Design system · 2026</p><h3>Onepiece System</h3><p class="case-thesis">The design system, interaction language and mascot logic behind this portfolio.</p><div class="case-facts"><span><b>Role</b> Designer & builder</span><span><b>Focus</b> Identity through behavior</span></div><button class="case-action" data-dialog="system-dialog">View case study <span>↗</span></button></div>
+        </article>
+      </div>
     </section>
 
-    <section class="practice section" id="practice" aria-labelledby="practice-title">
-      <div class="section-heading reveal"><p class="eyebrow">How I work</p><h2 id="practice-title">Evidence first. Interfaces second. Learning always.</h2></div>
-      <div class="practice-grid">
-        <article class="reveal"><span>Discover</span><h3>Find the real friction</h3><p>Research, behavioral evidence, competitor patterns, and hypothesis mapping.</p></article>
-        <article class="reveal"><span>Shape</span><h3>Make decisions visible</h3><p>Flows, information architecture, wireframes, and testable product principles.</p></article>
-        <article class="reveal"><span>Build</span><h3>Prototype the behavior</h3><p>High-fidelity interaction, design systems, accessibility, and frontend collaboration.</p></article>
-        <article class="reveal"><span>Learn</span><h3>Measure what changed</h3><p>Usability evidence, product signals, reflection, and deliberate iteration.</p></article>
+    <section class="projects section" id="projects" aria-labelledby="projects-title">
+      <header class="section-intro compact reveal"><p class="section-label">02 / Selected projects</p><h2 id="projects-title">Smaller builds.<br><em>Real range.</em></h2><p>Product concepts and platforms across community, cybersecurity, work, healthcare and sustainability.</p></header>
+      <div class="project-grid">
+        <article class="project-tile reveal" data-project="Hobby Ghar"><span>Community platform</span><h3>Hobby Ghar</h3><p>Events, shops and clubs brought into one interest-led community experience.</p><b>Live product design ↗</b></article>
+        <article class="project-tile reveal" data-project="CTF Platform"><span>Cybersecurity</span><h3>CTF Platform</h3><p>A structured challenge environment that helps learners practise security skills.</p><b>UX + frontend ↗</b></article>
+        <article class="project-tile reveal" data-project="Job & Skill"><span>Career technology</span><h3>Job & Skill</h3><p>Matching career opportunities with skill gaps and practical learning paths.</p><b>Product concept ↗</b></article>
+        <article class="project-tile reveal" data-project="Molly.CO"><span>Digital product</span><h3>Molly.CO</h3><p>A responsive product experience built through UI/UX and frontend collaboration.</p><b>UI/UX ↗</b></article>
+        <article class="project-tile reveal" data-project="MedTrack"><span>Healthcare</span><h3>MedTrack</h3><p>Medication and health routines organised into a clearer daily experience.</p><b>Mobile UX ↗</b></article>
+        <article class="project-tile reveal" data-project="Solar"><span>Sustainability</span><h3>Solar</h3><p>Making solar information and decisions understandable for everyday users.</p><b>Web experience ↗</b></article>
+      </div>
+    </section>
+
+    <section class="experience section" id="experience" aria-labelledby="experience-title">
+      <header class="section-intro compact reveal"><p class="section-label">03 / Experience</p><h2 id="experience-title">From supporting flows<br>to leading products.</h2></header>
+      <div class="timeline">
+        <article class="timeline-item reveal"><time>Dec 2024 — Dec 2025</time><div><h3>Product Designer (UI/UX)</h3><p class="company">Hobbyghar · Bangalore, India</p><p>Led end-to-end product design for live mobile applications and web platforms—from concept to launch—while maintaining consistency and translating business and user needs into scalable products.</p></div></article>
+        <article class="timeline-item reveal"><time>May 2024 — Jul 2024</time><div><h3>UI/UX Designer</h3><p class="company">ADM Education & Welfare Society · India</p><p>Worked with development teams and clients on user-centred mobile applications and responsive websites aligned with user and business requirements.</p></div></article>
+        <article class="timeline-item reveal"><time>Jul 2023 — Apr 2024</time><div><h3>Product Designer</h3><p class="company">Spillmate · Haryana, India</p><p>Supported end-to-end product design through user research, wireframes, prototypes and cross-functional collaboration.</p></div></article>
       </div>
     </section>
 
     <section class="about section" id="about" aria-labelledby="about-title">
-      <div class="about-mark reveal">BP<span>03</span></div>
-      <div class="about-copy reveal"><p class="eyebrow">About</p><h2 id="about-title">A designer who can follow the idea all the way into the product.</h2><p>I work across UI/UX, product thinking, and frontend implementation. My cybersecurity and computer-science background makes me especially curious about trust, complex systems, and the details that turn an interface into dependable behavior.</p><p>My tools include Figma, prototyping, HTML, CSS, JavaScript, Python, and the research methods needed to know what should be built before polishing it.</p><a class="button secondary" href="assets/Banuprakash-Nammithi-CV.pdf" target="_blank" rel="noreferrer">Download my CV <span>↗</span></a></div>
+      <div class="about-number reveal">2+<span>years designing</span></div>
+      <div class="about-copy reveal"><p class="section-label">04 / About me</p><h2 id="about-title">Designer by practice.<br><em>Systems thinker by nature.</em></h2><p>I’m studying Advanced Computer Science at the University of Hertfordshire after completing Computer Science with Cyber Security at Manav Rachna University. That combination helps me design beyond the surface—thinking about behavior, trust, constraints and how products actually work.</p><p>I work with Figma, Rive, Miro, research, prototyping, design systems and frontend technologies. I’m most useful where a problem is complex but the experience needs to feel simple.</p><div class="skill-row"><span>Product design</span><span>User research</span><span>Interaction design</span><span>Design systems</span><span>Prototyping</span><span>Frontend</span></div><a class="button outline" href="assets/Banuprakash-Nammithi-CV.pdf" target="_blank" rel="noreferrer">Download CV ↗</a></div>
     </section>
 
     <section class="contact section" id="contact" aria-labelledby="contact-title">
-      <p class="eyebrow reveal">Start a conversation</p><h2 id="contact-title" class="reveal">Have a difficult product problem? <em>Send it my way.</em></h2>
-      <a class="contact-link reveal" id="contact-link" href="mailto:banu143bp@gmail.com?subject=Let%27s%20work%20together">banu143bp@gmail.com <span>↗</span></a>
-      <p class="contact-status" id="contact-status" role="status" aria-live="polite">Available for product design opportunities and collaborations.</p>
+      <p class="section-label reveal">05 / Contact</p><h2 id="contact-title" class="reveal">Let’s make something<br><em>worth understanding.</em></h2><a id="contact-link" class="contact-email reveal" href="mailto:banu143bp@gmail.com?subject=Let%27s%20work%20together">banu143bp@gmail.com <span>↗</span></a><p id="contact-status" class="contact-status" role="status" aria-live="polite">Open to product design opportunities and collaborations.</p>
     </section>
   </main>
 
-  <footer><p>Designed and built by Banu Prakash.</p><div class="footer-links"><a href="https://www.linkedin.com/in/nammithi-banu-prakash-135471228/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Banubp" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#top">Back to top ↑</a></div></footer>
+  <footer><p>Designed and built by Banu Prakash.</p><div><a href="https://www.linkedin.com/in/nammithi-banu-prakash-135471228/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Banubp" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#top">Back to top ↑</a></div></footer>
 
-  <dialog id="nexa-dialog" class="case-dialog"><button class="dialog-close" aria-label="Close project story">×</button><p class="project-index">Nexa · Product case study</p><h2>Confidence before payment</h2><div class="dialog-grid"><section><h3>The problem</h3><p>UPI makes payment fast, but speed does not answer the question people ask before paying: “Can I safely afford this?” Fragmented subscriptions, shared expenses, and unclear future commitments increase hesitation.</p></section><section><h3>The product move</h3><p>Reframe the home balance as Safe-to-Spend, then connect recurring commitments, shared finance, scan-to-pay, and guidance around that decision.</p></section><section><h3>My role</h3><p>Product strategy, user-flow design, UX psychology, interface design, prototyping, and system definition.</p></section><section><h3>Design principle</h3><p>Show the consequence before asking for commitment. Confidence is a product capability, not reassurance copy.</p></section></div></dialog>
-  <dialog id="booking-dialog" class="case-dialog"><button class="dialog-close" aria-label="Close project story">×</button><p class="project-index">Booking.com · Product redesign</p><h2>One trip, not five bookings</h2><div class="dialog-grid"><section><h3>The problem</h3><p>Travel planning is experienced as one journey but handled as disconnected searches, tabs, bookings, and confirmations. Each handoff adds uncertainty.</p></section><section><h3>The product move</h3><p>Connect inspiration, property evaluation, experiences, and checkout into a journey-aware system that retains context.</p></section><section><h3>My role</h3><p>Journey mapping, information architecture, interaction design, high-fidelity prototyping, and usability reasoning.</p></section><section><h3>Design principle</h3><p>Continuity reduces cognitive load. The product should remember the trip the way the traveler thinks about it.</p></section></div></dialog>
+  <dialog id="nexa-dialog" class="case-dialog"><button class="dialog-close" aria-label="Close case study">×</button><p class="case-meta">Nexa · Fintech case study</p><h2>Confidence before payment</h2><div class="dialog-grid"><section><h3>Problem</h3><p>UPI makes transactions fast, but a balance alone does not tell people what they can safely spend after upcoming commitments.</p></section><section><h3>Product move</h3><p>Reframe the balance as Safe-to-Spend and connect subscriptions, shared finance, scan-to-pay and contextual AI guidance around that decision.</p></section><section><h3>Design principle</h3><p>Show the consequence before commitment. Trust should be built into the product model, not added as reassurance copy.</p></section><section><h3>Contribution</h3><p>Research synthesis, product strategy, flows, UX psychology, interface design, prototyping and system definition.</p></section></div></dialog>
+  <dialog id="booking-dialog" class="case-dialog"><button class="dialog-close" aria-label="Close case study">×</button><p class="case-meta">Booking.com · Travel redesign</p><h2>One trip, not five bookings</h2><div class="dialog-grid"><section><h3>Problem</h3><p>Travellers experience one journey, while the product splits discovery, stays, experiences, checkout and post-booking into disconnected decisions.</p></section><section><h3>Product move</h3><p>Create a personalised, journey-aware system for business travellers and luxury explorers that preserves context across the trip.</p></section><section><h3>Key interactions</h3><p>Destination previews, enhanced search, curated experiences, responsive patterns, hover feedback and animated continuity.</p></section><section><h3>Contribution</h3><p>Journey mapping, information architecture, interaction design, responsive design system, prototyping and usability reasoning.</p></section></div></dialog>
+  <dialog id="soft-dialog" class="case-dialog"><button class="dialog-close" aria-label="Close case study">×</button><p class="case-meta">Soft · Mental-health product</p><h2>Support without pressure</h2><div class="dialog-grid"><section><h3>Problem</h3><p>Mental-health tools can feel clinical, demanding or unsafe at exactly the moment a person needs low-friction support.</p></section><section><h3>Direction</h3><p>A soft visual and conversational system that prioritises emotional safety, privacy, calm check-ins and progressive disclosure.</p></section><section><h3>Principle</h3><p>Never turn care into performance. The product supports reflection without guilt, streak pressure or visual overload.</p></section><section><h3>Contribution</h3><p>Research framing, emotional journey, information architecture, interface direction, illustration and interaction concepts.</p></section></div></dialog>
+  <dialog id="system-dialog" class="case-dialog"><button class="dialog-close" aria-label="Close case study">×</button><p class="case-meta">Onepiece · Portfolio system</p><h2>Identity through behavior</h2><div class="dialog-grid"><section><h3>Problem</h3><p>Many designer portfolios look like polished marketing sites but do not demonstrate interaction thinking or a repeatable system.</p></section><section><h3>System</h3><p>A light editorial hierarchy, reusable case and project structures, semantic tokens and a 70×70 interactive mascot.</p></section><section><h3>Mascot logic</h3><p>Awake on entry, follows pointer and scroll, works on project focus, sleeps after inactivity and sends a plane when contact opens.</p></section><section><h3>Contribution</h3><p>Workflow, IA, wireframes, visual system, interaction specification, accessible implementation and browser QA.</p></section></div></dialog>
 </body>
 </html>
