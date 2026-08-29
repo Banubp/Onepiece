@@ -5,7 +5,8 @@ const menuButton = document.querySelector('.menu-button');
 const nav = document.querySelector('#nav');
 const mascotCanvas = mascot.querySelector('canvas');
 const mascotContext = mascotCanvas.getContext('2d');
-const mascotDirectionFrames = [...mascot.querySelectorAll('.mascot-direction')];
+const mascotVectorHead = mascot.querySelector('.mascot-vector-head');
+const mascotVectorPupils = mascot.querySelector('.mascot-vector-pupils');
 const designWord = document.querySelector('#design-word');
 let idleTimer;
 let scrollTimer;
@@ -16,10 +17,6 @@ let eyePosition = {x: 0, y: 0};
 let mascotStateStarted = performance.now();
 const directionTarget = {x:0,y:0};
 const directionPosition = {x:0,y:0};
-const directionVectors = [
-  {x:-.25,y:0}, {x:-1,y:0}, {x:-.7,y:-.7}, {x:0,y:-1},
-  {x:.7,y:-.7}, {x:1,y:0}, {x:.7,y:.7}, {x:-.7,y:.7}
-];
 
 const mascotPalette = {ink:'#20211f',skin:'#d7a47f',olive:'#66724d',oliveDark:'#4f593c',cargo:'#b58b59',cargoDark:'#8e6d48',paper:'#f5f2eb',purple:'#6847e8'};
 
@@ -143,20 +140,10 @@ function moveEyes(clientX, clientY) {
 function renderDirectionFrames() {
   directionPosition.x += (directionTarget.x - directionPosition.x) * .085;
   directionPosition.y += (directionTarget.y - directionPosition.y) * .085;
-  const strength = Math.hypot(directionPosition.x, directionPosition.y);
-
-  if (!reducedMotion && strength > .08) {
-    const x = directionPosition.x / strength;
-    const y = directionPosition.y / strength;
-    const scores = directionVectors.map((vector,index) => ({index,score:x*vector.x+y*vector.y})).sort((a,b) => b.score-a.score);
-    const spread = Math.max(.08,scores[0].score-scores[1].score);
-    const blend = Math.max(0,Math.min(.32,.32-spread));
-    mascotDirectionFrames.forEach((frame,index) => {
-      frame.style.opacity = index === scores[0].index ? String(1-blend) : index === scores[1].index ? String(blend) : '0';
-    });
-  } else {
-    mascotDirectionFrames.forEach((frame,index) => { frame.style.opacity = index === 0 ? '1' : '0'; });
-  }
+  const x = reducedMotion ? 0 : directionPosition.x;
+  const y = reducedMotion ? 0 : directionPosition.y;
+  mascotVectorHead.style.transform = `translate(${(x*4).toFixed(2)}px, ${(y*2.5).toFixed(2)}px) rotate(${(x*5).toFixed(2)}deg)`;
+  mascotVectorPupils.style.transform = `translate(${(x*2.7).toFixed(2)}px, ${(y*2).toFixed(2)}px)`;
   requestAnimationFrame(renderDirectionFrames);
 }
 
@@ -267,6 +254,6 @@ if (!reducedMotion && designWord) {
       wordIndex = (wordIndex + 1) % words.length;
       designWord.textContent = words[wordIndex];
       designWord.classList.remove('changing');
-    }, 240);
-  }, 2600);
+    }, 150);
+  }, 1800);
 }
