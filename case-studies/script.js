@@ -32,7 +32,7 @@ const revealObserver = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
 
 const sections = [...document.querySelectorAll('[data-section]')];
-const tocLinks = [...document.querySelectorAll('.toc a')];
+const tocLinks = [...document.querySelectorAll('.toc a, .story-nav a')];
 if (sections.length && tocLinks.length) {
   const sectionObserver = new IntersectionObserver(entries => {
     const visible = entries.filter(entry => entry.isIntersecting).sort((a,b) => b.intersectionRatio-a.intersectionRatio)[0];
@@ -46,3 +46,9 @@ if (sections.length && tocLinks.length) {
   }, {rootMargin:'-24% 0px -58%',threshold:[0,.15,.4]});
   sections.forEach(section => sectionObserver.observe(section));
 }
+
+const topLink = document.querySelector('[data-back-to-top]');
+topLink?.addEventListener('click', event => {
+  event.preventDefault();
+  scrollTo({top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+});
