@@ -205,6 +205,15 @@ document.querySelectorAll('.project-tile').forEach(tile => {
   tile.addEventListener('focusin', () => setMascot('wave', 900));
 });
 
+const sherlockCards = [...document.querySelectorAll('.sherlock-card')];
+sherlockCards.forEach(card => {
+  card.addEventListener('toggle', () => {
+    if (!card.open) return;
+    sherlockCards.forEach(other => { if (other !== card) other.open = false; });
+    setMascot('wave', 750);
+  });
+});
+
 let dialogTrigger;
 document.querySelectorAll('[data-dialog]').forEach(button => button.addEventListener('click', () => {
   dialogTrigger = button;
