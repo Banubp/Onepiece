@@ -1,28 +1,28 @@
 # Design QA
 
-- Primary card reference: `upload/f4c1e933-4d97-4dbd-bdb3-f5e183be702a.png`
-- Rejected implementation evidence: `upload/c0a46dfd-dfa9-47ff-b59a-436492e96b52.png`
-- Supporting composition study: `upload/a6a47056-5206-4ea1-8f89-20336187d5df.png`
-- Scope: homepage case-study card proportion and hierarchy.
+- Selected target: `upload/66fedd2a-b31b-44f8-bef7-4424546a9684.png`
+- Rejected live result: `upload/4a023e0c-1061-4f27-9390-7bfa5b48c329.png`
+- Scope: homepage case-study card layout, typography, padding, and mockup containment.
 
 ## Corrections
 
-- Reset the inherited cross-axis alignment that caused the coloured stage to shrink into a narrow centred poster.
-- Restored a full-width case-coloured stage inside every card.
-- Matched the primary reference’s left-aligned number, metadata, sans-serif case title, readable thesis, black underlined CTA, and bold sans-serif stage statement.
-- Removed the role/focus rows and secondary stage label that were making the homepage treatment busier than the source.
-- Preserved the responsive two-column collection, whole-card navigation, focus treatment, mascot reaction, and reduced-motion behavior.
-- Added the restrained case-colour circle from the approved reference, with a small eased hover response.
+- Rebuilt the information band as two independent columns: project identity on the left and thesis on the right.
+- Moved number and category above the title to match the selected rough board.
+- Reduced the title scale and added a dedicated width so long names cannot collide with the thesis.
+- Kept the CTA beneath the title and aligned it to the same left edge.
+- Reduced and contained product mockups inside the coloured stage.
+- Removed the black hover label that was not present in the selected target.
+- Preserved whole-card navigation, keyboard focus, touch behavior, reduced motion, and subtle mockup depth.
 
 ## Verification
 
 - Production build passed.
-- JavaScript syntax passed.
-- Strict premium UI audit passed with zero findings.
-- Four semantic case-card links still resolve to Nexa, Booking.com, Echo, and Spine.
+- Strict premium UI audit passed.
+- CSS diff check passed.
+- Four semantic case-study links remain intact.
 
-## Limitation
+## Blocker
 
-- A connected cloud browser is not exposed in this runtime, so screenshot-level browser comparison could not be rerun here.
+- The cloud browser could not connect to the local preview service, so a same-viewport screenshot comparison could not be completed in this runtime.
 
-final result: static checks passed; browser visual QA unavailable
+final result: blocked
