@@ -193,7 +193,21 @@ document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(e
 document.querySelectorAll('.case-card').forEach(card => {
   card.style.setProperty('--card-accent', card.dataset.accent);
   const work = () => { lockedState = true; mascot.dataset.state = 'work'; };
-  const stop = () => { lockedState = false; mascot.dataset.state = 'awake'; scheduleSleep(); };
+  const stop = () => {
+    lockedState = false;
+    mascot.dataset.state = 'awake';
+    card.style.setProperty('--mx', '0px');
+    card.style.setProperty('--my', '0px');
+    scheduleSleep();
+  };
+  card.addEventListener('pointermove', event => {
+    if (reducedMotion || event.pointerType === 'touch') return;
+    const box = card.getBoundingClientRect();
+    const x = ((event.clientX - box.left) / box.width - .5) * 12;
+    const y = ((event.clientY - box.top) / box.height - .5) * 10;
+    card.style.setProperty('--mx', `${x.toFixed(2)}px`);
+    card.style.setProperty('--my', `${y.toFixed(2)}px`);
+  }, {passive:true});
   card.addEventListener('mouseenter', work);
   card.addEventListener('focusin', work);
   card.addEventListener('mouseleave', stop);
