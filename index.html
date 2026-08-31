@@ -19,7 +19,7 @@
 
   <header class="header">
     <a class="wordmark" href="#top"><b>Banuprakash Nammithi</b><span>Product Designer · MSc Advanced CS</span></a>
-    <button class="menu-button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav" onclick="togglePrimaryNav()">Menu</button>
     <nav id="nav" aria-label="Primary navigation">
       <a href="#case-studies">Work</a>
       <a href="#about">About</a>
@@ -75,35 +75,29 @@
       <header class="section-intro reveal"><p class="section-label">01 / Case studies</p><h2 id="case-title">The work behind<br><em>the screens.</em></h2><p>Four focused stories showing how I frame problems, make product decisions and build coherent experiences.</p></header>
 
       <div class="case-list">
-        <article class="case-card case-nexa reveal" data-accent="#6847e8" data-project="Nexa"><span class="case-side">Selected Work</span><strong class="case-number">1</strong>
-          <div class="case-copy"><p class="case-meta">Fintech · Product strategy · 2026</p><h3>Nexa</h3><p class="case-thesis">An Indian UPI experience designed around confidence, not only transaction speed.</p><div class="case-facts"><span><b>Role</b> Product Designer</span><span><b>Focus</b> Trust & money psychology</span></div><button class="case-action" data-dialog="nexa-dialog">View case study <span>↗</span></button></div>
-          <div class="nexa-devices case-media"><img src="assets/projects/nexa/safe-to-spend.png" alt="Nexa Safe to Spend screen"><img src="assets/projects/nexa/home.png" alt="Nexa home screen"><img src="assets/projects/nexa/ai-coach.png" alt="Nexa AI coach screen"></div>
-        </article>
+        <a class="case-card case-nexa reveal" href="case-studies/nexa.html" data-accent="#6847e8" data-project="Nexa">
+          <div class="case-card-head"><strong class="case-number">01</strong><p class="case-meta">Fintech · 0→1 concept</p></div>
+          <div class="case-copy"><h3>Nexa</h3><p class="case-thesis">Designing an Indian UPI experience around financial confidence, not only transaction speed.</p><div class="case-facts"><span><b>Role</b> Product Designer</span><span><b>Focus</b> Trust & money psychology</span></div><span class="case-action">View case study <i>↗</i></span></div>
+          <div class="case-card-visual"><strong>Clarity after every transaction.</strong><span>Product strategy · UI/UX</span></div>
+        </a>
 
-        <article class="case-card case-booking reveal" data-accent="#235cdd" data-project="Booking.com"><span class="case-side">Selected Work</span><strong class="case-number">2</strong>
-          <div class="case-media booking-stack"><img src="assets/projects/booking/explorer-home.jpg" alt="Booking.com redesigned travel discovery"><img src="assets/projects/booking/property.jpg" alt="Booking.com redesigned property page"></div>
-          <div class="case-copy"><p class="case-meta">Travel · Service redesign · 2026</p><h3>Booking.com</h3><p class="case-thesis">Turning fragmented searches and bookings into one personalised travel journey.</p><div class="case-facts"><span><b>Role</b> Product Designer</span><span><b>Focus</b> Journey continuity</span></div><button class="case-action" data-dialog="booking-dialog">View case study <span>↗</span></button></div>
-        </article>
+        <a class="case-card case-booking reveal" href="case-studies/booking.html" data-accent="#1769cf" data-project="Booking.com">
+          <div class="case-card-head"><strong class="case-number">02</strong><p class="case-meta">Travel · Strategic redesign</p></div>
+          <div class="case-copy"><h3>Booking.com</h3><p class="case-thesis">Moving from isolated bookings to one connected journey for business and premium travellers.</p><div class="case-facts"><span><b>Role</b> Product Designer</span><span><b>Focus</b> Journey continuity</span></div><span class="case-action">View case study <i>↗</i></span></div>
+          <div class="case-card-visual"><strong>One trip, not five bookings.</strong><span>Service design · Responsive UX</span></div>
+        </a>
 
-        <article class="case-card case-soft reveal" data-accent="#db6048" data-project="Soft"><span class="case-side">Selected Work</span><strong class="case-number">3</strong>
-          <div class="case-copy"><p class="case-meta">Mental health · Mobile product</p><h3>Soft</h3><p class="case-thesis">A calm, private mental-health companion designed to feel supportive without becoming clinical or overwhelming.</p><div class="case-facts"><span><b>Role</b> UI/UX Designer</span><span><b>Focus</b> Trust & emotional safety</span></div><button class="case-action" data-dialog="soft-dialog">View case study <span>↗</span></button></div>
-          <div class="concept-visual soft-visual" aria-hidden="true"><div class="soft-orbit one"></div><div class="soft-orbit two"></div><div class="soft-phone"><span>How are you<br>feeling today?</span><i></i><i></i><i></i></div></div>
-        </article>
+        <a class="case-card case-echo reveal" href="case-studies/echo.html" data-accent="#4c4fc8" data-project="Echo">
+          <div class="case-card-head"><strong class="case-number">03</strong><p class="case-meta">AI systems · Product architecture</p></div>
+          <div class="case-copy"><h3>Echo</h3><p class="case-thesis">Turning one short intent into coordinated action with evidence, bounded authority and approval gates.</p><div class="case-facts"><span><b>Role</b> Product Architect</span><span><b>Focus</b> Trustworthy autonomy</span></div><span class="case-action">View case study <i>↗</i></span></div>
+          <div class="case-card-visual"><strong>Delegate the goal, not the coordination.</strong><span>Systems thinking · Agent UX</span></div>
+        </a>
 
-        <article class="case-card case-system reveal" data-accent="#1c776b" data-project="Onepiece system"><span class="case-side">Selected Work</span><strong class="case-number">4</strong>
-          <div class="concept-visual system-visual" aria-hidden="true"><div class="token token-a">Aa</div><div class="token token-b">70px</div><div class="token token-c">#5746E8</div><div class="component-sample">View project ↗</div></div>
-          <div class="case-copy"><p class="case-meta">Portfolio · Design system · 2026</p><h3>Onepiece System</h3><p class="case-thesis">The design system, interaction language and mascot logic behind this portfolio.</p><div class="case-facts"><span><b>Role</b> Designer & builder</span><span><b>Focus</b> Identity through behavior</span></div><button class="case-action" data-dialog="system-dialog">View case study <span>↗</span></button></div>
-        </article>
-
-        <article class="case-card case-echo reveal" data-accent="#6847e8" data-project="Echo"><span class="case-side">Selected Work</span><strong class="case-number">5</strong>
-          <div class="case-copy"><p class="case-meta">AI systems · Product architecture · 2026</p><h3>Echo</h3><p class="case-thesis">A multi-agent personal assistant that turns one short intent into coordinated, evidence-backed action.</p><div class="case-facts"><span><b>Role</b> Product architect</span><span><b>Focus</b> Trustworthy autonomy</span></div><button class="case-action" data-dialog="echo-dialog">View case study <span>↗</span></button></div>
-          <div class="concept-visual echo-visual" aria-hidden="true"><div class="echo-core">Intent</div><div class="echo-node n1">Calendar</div><div class="echo-node n2">Cinema</div><div class="echo-node n3">Budget</div><div class="echo-node n4">Approval</div></div>
-        </article>
-
-        <article class="case-card case-spine reveal" data-accent="#11110f" data-project="Spine"><span class="case-side">Selected Work</span><strong class="case-number">6</strong>
-          <div class="case-copy"><p class="case-meta">Research system · Decision intelligence · 2026</p><h3>Spine</h3><p class="case-thesis">A product-agnostic reasoning system for exposing mechanisms, leaks and weak assumptions before teams intervene.</p><div class="case-facts"><span><b>Role</b> Framework designer</span><span><b>Focus</b> Evidence & decisions</span></div><button class="case-action" data-dialog="spine-dialog">View case study <span>↗</span></button></div>
-          <div class="concept-visual spine-visual" aria-hidden="true"><div class="spine-axis"><span>Evidence</span><span>Mechanism</span><span>Leak</span><span>Decision</span></div><div class="spine-score">61<small>principles</small></div></div>
-        </article>
+        <a class="case-card case-spine reveal" href="case-studies/spine.html" data-accent="#697650" data-project="Spine">
+          <div class="case-card-head"><strong class="case-number">04</strong><p class="case-meta">Decision intelligence · Framework</p></div>
+          <div class="case-copy"><h3>Spine</h3><p class="case-thesis">A reasoning system that exposes mechanisms, leaks and weak assumptions before a team intervenes.</p><div class="case-facts"><span><b>Role</b> Framework Designer</span><span><b>Focus</b> Evidence & decisions</span></div><span class="case-action">View case study <i>↗</i></span></div>
+          <div class="case-card-visual"><strong>Make every product decision falsifiable.</strong><span>Research system · Evaluation</span></div>
+        </a>
       </div>
     </section>
 
@@ -140,14 +134,14 @@
     <section class="process section" id="process" aria-labelledby="process-title">
       <header class="process-intro reveal"><p class="section-label">04 / How I evaluate a product</p><h2 id="process-title">Every product becomes<br><em>a case worth investigating.</em></h2><p>SHERLOCK is my product-investigation lens. Hover, focus or tap a card to see the question it helps me answer.</p></header>
       <div class="sherlock-grid">
-        <details class="sherlock-card reveal"><summary><b>S</b><span>Signal</span></summary><p>What symptom, change or opportunity made this problem worth investigating now?</p></details>
-        <details class="sherlock-card reveal"><summary><b>H</b><span>How do we know?</span></summary><p>Which qualitative and quantitative evidence proves the signal is real?</p></details>
-        <details class="sherlock-card reveal"><summary><b>E</b><span>Examine the system</span></summary><p>How do users, journeys, technology, business and operations affect one another?</p></details>
-        <details class="sherlock-card reveal"><summary><b>R</b><span>Root cause</span></summary><p>What underlying mechanism—not just the visible symptom—is creating the problem?</p></details>
-        <details class="sherlock-card reveal"><summary><b>L</b><span>List hypotheses</span></summary><p>What competing, testable explanations could account for what we observed?</p></details>
-        <details class="sherlock-card reveal"><summary><b>O</b><span>Order investigation</span></summary><p>Which test gives the highest information gain for the least risk and effort?</p></details>
-        <details class="sherlock-card reveal"><summary><b>C</b><span>Create interventions</span></summary><p>Which UI, non-UI, operational or strategic response best addresses the cause?</p></details>
-        <details class="sherlock-card reveal"><summary><b>K</b><span>Know it worked</span></summary><p>Which metrics, experiments and guardrails prove the intervention created value?</p></details>
+        <article class="sherlock-card reveal" tabindex="0"><div class="sherlock-title"><b>S</b><span>Signal</span></div><p>What symptom, change or opportunity made this problem worth investigating now?</p></article>
+        <article class="sherlock-card reveal" tabindex="0"><div class="sherlock-title"><b>H</b><span>How do we know?</span></div><p>Which qualitative and quantitative evidence proves the signal is real?</p></article>
+        <article class="sherlock-card reveal" tabindex="0"><div class="sherlock-title"><b>E</b><span>Examine the system</span></div><p>How do users, journeys, technology, business and operations affect one another?</p></article>
+        <article class="sherlock-card reveal" tabindex="0"><div class="sherlock-title"><b>R</b><span>Root cause</span></div><p>What underlying mechanism—not just the visible symptom—is creating the problem?</p></article>
+        <article class="sherlock-card reveal" tabindex="0"><div class="sherlock-title"><b>L</b><span>List hypotheses</span></div><p>What competing, testable explanations could account for what we observed?</p></article>
+        <article class="sherlock-card reveal" tabindex="0"><div class="sherlock-title"><b>O</b><span>Order investigation</span></div><p>Which test gives the highest information gain for the least risk and effort?</p></article>
+        <article class="sherlock-card reveal" tabindex="0"><div class="sherlock-title"><b>C</b><span>Create interventions</span></div><p>Which UI, non-UI, operational or strategic response best addresses the cause?</p></article>
+        <article class="sherlock-card reveal" tabindex="0"><div class="sherlock-title"><b>K</b><span>Know it worked</span></div><p>Which metrics, experiments and guardrails prove the intervention created value?</p></article>
       </div>
     </section>
 
@@ -158,11 +152,5 @@
 
   <footer><p>Designed and built by Banu Prakash.</p><div><a href="https://www.linkedin.com/in/nammithi-banu-prakash-135471228/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Banubp" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#top">Back to top ↑</a></div></footer>
 
-  <dialog id="nexa-dialog" class="case-dialog"><button class="dialog-close" aria-label="Close case study">×</button><p class="case-meta">Nexa · Fintech case study</p><h2>Confidence before payment</h2><div class="dialog-grid"><section><h3>Problem</h3><p>UPI makes transactions fast, but a balance alone does not tell people what they can safely spend after upcoming commitments.</p></section><section><h3>Product move</h3><p>Reframe the balance as Safe-to-Spend and connect subscriptions, shared finance, scan-to-pay and contextual AI guidance around that decision.</p></section><section><h3>Design principle</h3><p>Show the consequence before commitment. Trust should be built into the product model, not added as reassurance copy.</p></section><section><h3>Contribution</h3><p>Research synthesis, product strategy, flows, UX psychology, interface design, prototyping and system definition.</p></section></div></dialog>
-  <dialog id="booking-dialog" class="case-dialog"><button class="dialog-close" aria-label="Close case study">×</button><p class="case-meta">Booking.com · Travel redesign</p><h2>One trip, not five bookings</h2><div class="dialog-grid"><section><h3>Problem</h3><p>Travellers experience one journey, while the product splits discovery, stays, experiences, checkout and post-booking into disconnected decisions.</p></section><section><h3>Product move</h3><p>Create a personalised, journey-aware system for business travellers and luxury explorers that preserves context across the trip.</p></section><section><h3>Key interactions</h3><p>Destination previews, enhanced search, curated experiences, responsive patterns, hover feedback and animated continuity.</p></section><section><h3>Contribution</h3><p>Journey mapping, information architecture, interaction design, responsive design system, prototyping and usability reasoning.</p></section></div></dialog>
-  <dialog id="soft-dialog" class="case-dialog"><button class="dialog-close" aria-label="Close case study">×</button><p class="case-meta">Soft · Mental-health product</p><h2>Support without pressure</h2><div class="dialog-grid"><section><h3>Problem</h3><p>Mental-health tools can feel clinical, demanding or unsafe at exactly the moment a person needs low-friction support.</p></section><section><h3>Direction</h3><p>A soft visual and conversational system that prioritises emotional safety, privacy, calm check-ins and progressive disclosure.</p></section><section><h3>Principle</h3><p>Never turn care into performance. The product supports reflection without guilt, streak pressure or visual overload.</p></section><section><h3>Contribution</h3><p>Research framing, emotional journey, information architecture, interface direction, illustration and interaction concepts.</p></section></div></dialog>
-  <dialog id="system-dialog" class="case-dialog"><button class="dialog-close" aria-label="Close case study">×</button><p class="case-meta">Onepiece · Portfolio system</p><h2>Identity through behavior</h2><div class="dialog-grid"><section><h3>Problem</h3><p>Many designer portfolios look like polished marketing sites but do not demonstrate interaction thinking or a repeatable system.</p></section><section><h3>System</h3><p>A light editorial hierarchy, reusable case and project structures, semantic tokens and a 70×70 interactive mascot.</p></section><section><h3>Mascot logic</h3><p>Awake on entry, follows pointer and scroll, works on project focus, sleeps after inactivity and sends a plane when contact opens.</p></section><section><h3>Contribution</h3><p>Workflow, IA, wireframes, visual system, interaction specification, accessible implementation and browser QA.</p></section></div></dialog>
-  <dialog id="echo-dialog" class="case-dialog"><button class="dialog-close" aria-label="Close case study">×</button><p class="case-meta">Echo · AI systems case study</p><h2>One intent, coordinated action</h2><div class="dialog-grid"><section><h3>Problem</h3><p>Everyday plans are scattered across calendars, websites, subscriptions and approvals. Most assistants answer questions but leave the coordination to the user.</p></section><section><h3>Product move</h3><p>Translate a short intent into parallel specialist tasks, combine their evidence, detect conflicts and pause irreversible actions behind a clear approval gate.</p></section><section><h3>System</h3><p>Calendar, cinema, subscription and booking adapters share a deterministic plan, evidence model and persistent run history.</p></section><section><h3>Contribution</h3><p>Product architecture, orchestration model, conflict UX, approval design, evaluation scenarios and implementation direction.</p></section></div></dialog>
-  <dialog id="spine-dialog" class="case-dialog"><button class="dialog-close" aria-label="Close case study">×</button><p class="case-meta">Spine · Research system</p><h2>Intervene only after understanding</h2><div class="dialog-grid"><section><h3>Problem</h3><p>Teams often jump from a visible symptom to a familiar solution without separating competing explanations or checking the mechanism underneath.</p></section><section><h3>Framework</h3><p>Spine maps evidence through mechanisms, links, leaks and inversions, then runs a six-pass audit before recommending intervention.</p></section><section><h3>Decision discipline</h3><p>Each hypothesis receives explicit confidence, supporting and contradicting evidence, missing evidence and predicted observations.</p></section><section><h3>Contribution</h3><p>61-principle library, 12 mechanisms, audit engine, five-gate Forge, severity instruments and a compounding learning loop.</p></section></div></dialog>
 </body>
 </html>

@@ -170,11 +170,11 @@ window.addEventListener('keydown', wake);
 window.addEventListener('touchstart', wake, {passive:true});
 window.addEventListener('scroll', onScroll, {passive:true});
 
-menuButton.addEventListener('click', () => {
+window.togglePrimaryNav = () => {
   const open = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', String(!open));
   nav.classList.toggle('open', !open);
-});
+};
 nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
   nav.classList.remove('open');
   menuButton.setAttribute('aria-expanded', 'false');
@@ -207,36 +207,8 @@ document.querySelectorAll('.project-tile').forEach(tile => {
 
 const sherlockCards = [...document.querySelectorAll('.sherlock-card')];
 sherlockCards.forEach(card => {
-  card.addEventListener('toggle', () => {
-    if (!card.open) return;
-    sherlockCards.forEach(other => { if (other !== card) other.open = false; });
-    setMascot('wave', 750);
-  });
-});
-
-let dialogTrigger;
-document.querySelectorAll('[data-dialog]').forEach(button => button.addEventListener('click', () => {
-  dialogTrigger = button;
-  const dialog = document.getElementById(button.dataset.dialog);
-  dialog.showModal();
-  dialog.querySelector('.dialog-close').focus();
-  setMascot('work');
-}));
-
-document.querySelectorAll('.case-dialog').forEach(dialog => {
-  const closeDialog = () => {
-    dialog.close();
-    lockedState = false;
-    mascot.dataset.state = 'awake';
-    dialogTrigger?.focus();
-    scheduleSleep();
-  };
-  dialog.querySelector('.dialog-close').addEventListener('click', closeDialog);
-  dialog.addEventListener('click', event => { if (event.target === dialog) closeDialog(); });
-  dialog.addEventListener('close', () => {
-    lockedState = false;
-    mascot.dataset.state = 'awake';
-  });
+  card.addEventListener('mouseenter', () => setMascot('wave', 750));
+  card.addEventListener('focus', () => setMascot('wave', 750));
 });
 
 document.querySelector('#contact-link').addEventListener('click', () => {

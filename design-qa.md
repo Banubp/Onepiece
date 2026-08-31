@@ -1,26 +1,26 @@
 # Design QA
 
-- Source visual truth: `upload/8a900dd2-953f-49fc-b421-580cca71e28a.png`, `upload/8a066646-5682-424b-ab41-99ef296baf79.png`, and `upload/29b29335-8050-4408-a60f-9a9225f23cd7.png`
-- Scope: homepage About and SHERLOCK sections; removal of SHERLOCK navigation from detailed case studies
-- Validation: production build, JavaScript syntax, internal-anchor integrity, duplicate-ID scan, responsive CSS inspection, and reduced-motion review
+- Visual source: the former `case-studies/index.html` card system, merged into the existing Onepiece homepage design language.
+- Scope: homepage case-study collection, case-study navigation, and SHERLOCK disclosure behavior.
+- Static verification: production build, JavaScript syntax, internal anchors, duplicate IDs, detailed-study destinations, redirect behavior, responsive CSS, reduced motion, and strict premium UI audit.
 
-## Fidelity review
+## Case-study merge
 
-- About keeps the existing paper, ink, purple, Instrument Serif, DM Sans, and mono-label system while translating the reference into a two-column story/history composition.
-- Education and experience rows preserve a consistent date column, separator rhythm, and compact supporting text.
-- SHERLOCK uses the requested four-column by two-row grid at desktop widths, two columns on tablets, and one column on small screens.
-- Cards are deliberately compact before interaction, then expand with explanatory copy on hover, keyboard focus, or tap.
-- The SHERLOCK strip was removed from Nexa, Booking.com, Echo, and Spine so the framework appears once as a portfolio-level point of view.
+- The homepage now contains the four detailed studies: Nexa, Booking.com, Echo, and Spine.
+- The collection uses the approved two-column preview-card composition with a compact index, metadata, title, thesis, role/focus information, CTA, and case-colored editorial panel.
+- The entire card is a semantic link with hover, focus, and active navigation to its detailed study.
+- Existing mascot work-state behavior remains connected to card hover and keyboard focus.
+- The former standalone index redirects to the homepage case-study section. Every detailed study’s “All studies” and brand links return there directly.
 
-## Interaction and accessibility review
+## SHERLOCK interaction
 
-- Native `details` and `summary` controls provide keyboard and touch behavior without replacing semantic controls.
-- Only one tapped card remains open at a time; opening a card also triggers the existing mascot response.
-- Focus-visible treatment, reduced-motion behavior, responsive breakpoints, labels, and section anchors are present.
-- Strict static audit reported false positives for buttons whose actions are wired in `script.js`; those controls were manually checked against their listeners.
+- The click-only `details` controls and `+` affordances were removed.
+- Explanation copy now expands on hover and keyboard focus.
+- Touch users receive the equivalent focus state, while reduced-motion preferences suppress the transition.
+- Hover and focus also trigger the existing mascot wave response.
 
 ## Verification limitation
 
-- A browser executable and connected cloud-browser control were unavailable in this runtime, so screenshot-level visual comparison could not be rerun for this revision.
+- A connected cloud browser is not exposed in this runtime, so screenshot-level visual comparison and live pointer testing are unavailable here.
 
-final result: static checks passed; browser visual QA unavailable
+final result: static and interaction-contract checks passed; browser visual QA unavailable
