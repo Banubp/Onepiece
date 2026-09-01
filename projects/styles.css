@@ -570,6 +570,7 @@ body::after {
 .hero-panel {
   min-height: 520px;
   padding: 50px;
+  background: color-mix(in srgb, var(--accent) 58%, #15130f);
   box-shadow: 28px 28px 0 color-mix(in srgb, var(--soft) 62%, transparent);
 }
 .reading-nav {
@@ -628,6 +629,23 @@ body::after {
 .content-section {
   padding-block: 110px;
   background: rgba(245, 242, 235, 0.68);
+}
+.decision-section.content-section {
+  background: #eae5db;
+}
+.journey-grid article {
+  background: color-mix(in srgb, var(--accent) 58%, #15130f);
+}
+.craft.content-section {
+  background: #171613;
+}
+.reflection.content-section {
+  background: color-mix(in srgb, var(--accent) 58%, #15130f);
+  color: #fff;
+}
+.reflection.content-section .section-label {
+  color: #fff;
+  opacity: 0.78;
 }
 .next-project {
   margin-top: 55px !important;
