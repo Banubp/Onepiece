@@ -733,3 +733,65 @@ body::after {
     background: var(--paper);
   }
 }
+
+/* Colour-matched swipe field adapted from the supplied motion reference. */
+.hero-panel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.hero-panel > :not(.project-motion) {
+  position: relative;
+  z-index: 2;
+}
+.project-motion {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  opacity: 0.34;
+  pointer-events: none;
+}
+.project-motion i {
+  --size: calc(34px + (var(--tile) % 4) * 14px);
+  position: absolute;
+  left: calc((var(--tile) * 17%) - 18%);
+  bottom: -90px;
+  width: var(--size);
+  height: var(--size);
+  display: block;
+  background: color-mix(in srgb, var(--soft) 76%, #fff);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  animation: project-swipe calc(14s + (var(--tile) * 1.4s)) linear infinite;
+  animation-delay: calc(var(--tile) * -2.1s);
+}
+.project-motion i:nth-child(3n) {
+  border-radius: 50%;
+}
+.project-motion i:nth-child(even) {
+  transform: rotate(24deg);
+}
+@keyframes project-swipe {
+  0% {
+    translate: -15% 0;
+    rotate: 0deg;
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.75;
+  }
+  88% {
+    opacity: 0.48;
+  }
+  100% {
+    translate: 120px -720px;
+    rotate: 420deg;
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-motion i {
+    animation: none !important;
+    opacity: 0.18;
+  }
+}
