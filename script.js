@@ -160,6 +160,7 @@ function onScroll() {
     scrollTimer = window.setTimeout(() => { mascot.dataset.state = 'awake'; }, 420);
   }
   previousScroll = scrollY;
+  updatePrimaryNavigation();
   scheduleSleep();
 }
 
@@ -175,7 +176,20 @@ window.togglePrimaryNav = () => {
   menuButton.setAttribute('aria-expanded', String(!open));
   nav.classList.toggle('open', !open);
 };
-nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+const primaryLinks = [...nav.querySelectorAll('a')];
+const primarySections = primaryLinks.map(link => document.querySelector(link.hash));
+function updatePrimaryNavigation() {
+  const marker = scrollY + Math.min(innerHeight * .34, 260);
+  let activeIndex = -1;
+  primarySections.forEach((section, index) => {
+    if (section && section.offsetTop <= marker) activeIndex = index;
+  });
+  primaryLinks.forEach((link, index) => {
+    if (index === activeIndex) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  });
+}
+primaryLinks.forEach(link => link.addEventListener('click', () => {
   nav.classList.remove('open');
   menuButton.setAttribute('aria-expanded', 'false');
 }));

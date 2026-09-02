@@ -22,6 +22,8 @@ Typography uses Instrument Serif for the defining editorial headline, DM Sans fo
 - Case studies use full-width horizontal numbered rows with image layering and focused hover motion.
 - The highlighted hero word rotates between design outcomes without changing the headline's layout.
 - One orchestrated intro, followed by restrained reveal motion.
+- Interactive elements share one motion language: slight typographic scale, directional movement, visible focus, and a restrained press state without layout shift.
+- Project tiles and project-detail hero panels use colour-matched swipe fields adapted to each project; motion stays behind content and never carries meaning.
 - `prefers-reduced-motion` removes travel, parallax, and automatic mascot repositioning.
 
 ## Accessibility contract

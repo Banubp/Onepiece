@@ -122,3 +122,53 @@
 @media(max-width:760px){.case-section>.section-intro{padding-bottom:34px}.case-list{padding:0 20px 82px;gap:22px}.case-card{display:block}.case-card-head{display:block;padding:24px 24px 0}.case-card .case-number{margin:0 0 10px}.case-card .case-meta{max-width:24ch;text-align:left}.case-card .case-copy{display:block;padding:0 24px}.case-card .case-copy h3{padding:16px 0 0;margin:0;font-size:52px;overflow-wrap:normal}.case-card .case-thesis{padding:0;margin:16px 0 0;font-size:16px}.case-card .case-action{margin:22px 0 30px}.case-card-visual{min-height:430px;padding:30px 26px;grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:22px}.case-card-visual strong{font-size:40px}.case-preview{min-height:250px}.case-preview--booking{height:250px;min-height:250px}}
 @media(max-width:460px){.case-card .case-copy h3{font-size:49px}.case-card-visual{min-height:415px;padding:28px 22px}.case-card-visual strong{font-size:37px}.case-preview{min-height:245px}.case-preview--phones img{max-height:235px}}
 @media(prefers-reduced-motion:reduce){.case-card:hover .case-copy h3,.case-card:focus-visible .case-copy h3,.case-card:hover .case-thesis,.case-card:focus-visible .case-thesis{transform:none}.case-card:hover .case-action::after,.case-card:focus-visible .case-action::after{transform:none}}
+
+/* Portfolio UX enhancement pass — consistent hover, focus, active, and press states. */
+:root{--ease-out:cubic-bezier(.22,1,.36,1)}
+html{scroll-padding-top:120px;scrollbar-color:var(--purple) var(--paper);scrollbar-width:thin}
+*:focus-visible{outline:3px solid var(--purple);outline-offset:5px}
+a,button{cursor:pointer}
+.header nav a{padding-bottom:9px;transition:color .25s var(--ease-out),transform .25s var(--ease-out)}
+.header nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;width:auto;height:2px;background:var(--purple);transform:scaleX(0);transform-origin:left;transition:transform .28s var(--ease-out)}
+.header nav a:first-child::after{left:0;right:0;bottom:0;width:auto;transform:scaleX(0)}
+.header nav a:hover,.header nav a:focus-visible,.header nav a[aria-current="location"]{color:var(--purple);transform:translateY(-2px)}
+.header nav a:hover::after,.header nav a:focus-visible::after,.header nav a[aria-current="location"]::after{transform:scaleX(1)}
+.header nav a:active{transform:translateY(0)}
+.case-card{cursor:pointer}
+.case-card .case-copy h3{transform-origin:left center}
+.case-card:active{transform:translateY(0) scale(.997)}
+.project-tile{--project-accent:var(--purple);overflow:hidden;isolation:isolate;cursor:pointer}
+.project-tile:nth-child(1){--project-accent:#c84d31}.project-tile:nth-child(2){--project-accent:#30322d}.project-tile:nth-child(3){--project-accent:#5b4fe5}.project-tile:nth-child(4){--project-accent:#b83f66}.project-tile:nth-child(5){--project-accent:#2e725a}.project-tile:nth-child(6){--project-accent:#9a6d12}
+.project-tile::before{content:"";position:absolute;z-index:-1;inset:-30% -45%;background:linear-gradient(115deg,transparent 30%,color-mix(in srgb,var(--project-accent) 12%,transparent) 30% 54%,transparent 54%);transform:translateX(-52%);transition:transform .6s var(--ease-out)}
+.project-tile h3{transform-origin:left center;transition:transform .32s var(--ease-out),color .25s}
+.project-tile p{transition:color .25s,transform .32s var(--ease-out)}
+.project-tile b{display:inline-block;transition:transform .3s var(--ease-out),color .25s}
+.project-tile:hover::before,.project-tile:focus-visible::before{transform:translateX(38%)}
+.project-tile:hover h3,.project-tile:focus-visible h3{transform:scale(1.055);color:var(--project-accent)}
+.project-tile:hover p,.project-tile:focus-visible p{color:var(--ink);transform:translateX(4px)}
+.project-tile:hover b,.project-tile:focus-visible b{color:var(--project-accent);transform:translate(5px,-3px)}
+.project-tile:active{transform:translateY(-1px) scale(.992)}
+.history-row{position:relative;overflow:hidden;padding-right:48px;transition:background .3s var(--ease-out),padding-left .35s var(--ease-out),border-color .25s}
+.history-row::after{content:"↗";position:absolute;right:4px;top:50%;font:18px var(--mono);color:var(--purple);opacity:0;transform:translate(-10px,-50%);transition:opacity .25s,transform .35s var(--ease-out)}
+.history-row h3{transform-origin:left center;transition:color .25s,transform .35s var(--ease-out)}
+.history-row p,.history-row time{transition:color .25s,transform .35s var(--ease-out)}
+.history-row:hover{padding-left:12px;background:linear-gradient(90deg,rgba(104,71,232,.075),transparent 72%);border-color:rgba(104,71,232,.45)}
+.history-row:hover h3{color:var(--purple);transform:scale(1.055)}
+.history-row:hover p{color:var(--ink);transform:translateX(5px)}
+.history-row:hover time{color:var(--purple);transform:translateX(-25px)}
+.history-row:hover::after{opacity:1;transform:translate(0,-50%)}
+.skill-row span{transition:background .25s,color .25s,transform .3s var(--ease-out),border-color .25s}
+.skill-row span:hover{background:var(--purple);color:#fff;border-color:var(--purple);transform:translateY(-3px)}
+.sherlock-card b{transform-origin:left center;transition:color .2s,transform .35s var(--ease-out)}
+.sherlock-card:hover b,.sherlock-card:focus b,.sherlock-card:focus-within b{transform:scale(1.08)}
+.button{transition:background .25s,color .25s,transform .28s var(--ease-out),box-shadow .28s}
+.button:hover,.button:focus-visible{transform:translateY(-3px);box-shadow:7px 7px 0 rgba(104,71,232,.18)}
+.button:active{transform:translateY(0);box-shadow:none}
+.contact-email{display:inline-block;transition:transform .32s var(--ease-out),color .25s,text-decoration-color .25s}
+.contact-email span{display:inline-block;transition:transform .3s var(--ease-out)}
+.contact-email:hover,.contact-email:focus-visible{transform:scale(1.025);color:color-mix(in srgb,var(--purple) 82%,#111)}
+.contact-email:hover span,.contact-email:focus-visible span{transform:translate(7px,-6px)}
+footer a{display:inline-block;text-underline-offset:5px;transition:color .25s,transform .25s var(--ease-out)}footer a:hover,footer a:focus-visible{color:var(--purple);transform:translateY(-2px)}
+@media(max-width:850px){html{scroll-padding-top:92px}.header nav a{min-height:44px;display:flex;align-items:center}.history-row{padding-right:0}.history-row:hover{padding-left:0}.history-row:hover time{transform:none}.history-row::after{display:none}}
+@media(prefers-reduced-motion:reduce){.header nav a,.project-tile,.project-tile::before,.project-tile h3,.project-tile p,.project-tile b,.history-row,.history-row h3,.history-row p,.history-row time,.history-row::after,.skill-row span,.sherlock-card b,.button,.contact-email,.contact-email span,footer a{transition:none!important;transform:none!important}.project-tile::before{display:none}}
+@media(forced-colors:active){*:focus-visible{outline-color:Highlight}.project-tile::before{display:none}}
