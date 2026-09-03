@@ -74,11 +74,11 @@
 .case-card:hover .case-preview--phones img:first-child{transform:translateY(18px) rotate(-7deg)}
 .case-card:hover .case-preview--phones img:nth-child(2){transform:translateY(-8px)}
 .case-card:hover .case-preview--phones img:last-child{transform:translateY(18px) rotate(7deg)}
-.case-preview--booking img{position:absolute;border:1px solid rgba(255,255,255,.46);box-shadow:0 22px 40px rgba(0,35,91,.25);transition:transform .45s cubic-bezier(.22,1,.36,1)}
-.case-preview--booking img:first-child{width:84%;right:0;top:7%}
-.case-preview--booking img:last-child{width:58%;left:0;bottom:3%}
-.case-card:hover .case-preview--booking img:first-child{transform:translate(7px,-7px) rotate(1deg)}
-.case-card:hover .case-preview--booking img:last-child{transform:translate(-6px,7px) rotate(-1deg)}
+.case-preview--booking img{position:absolute;object-fit:contain;filter:drop-shadow(0 22px 28px rgba(0,35,91,.28));transition:transform .45s cubic-bezier(.22,1,.36,1)}
+.case-preview--booking img:first-child{width:76%;right:-2%;top:5%}
+.case-preview--booking img:last-child{width:52%;left:-2%;bottom:-2%}
+.case-card:hover .case-preview--booking img:first-child,.case-card:focus-visible .case-preview--booking img:first-child{transform:translate(7px,-7px) rotate(1deg) scale(1.02)}
+.case-card:hover .case-preview--booking img:last-child,.case-card:focus-visible .case-preview--booking img:last-child{transform:translate(-6px,7px) rotate(-1deg) scale(1.02)}
 .case-preview--echo,.case-preview--spine{display:grid;place-items:center}
 .case-preview--echo b{display:grid;place-items:center;width:126px;height:126px;border-radius:50%;background:#f5f2eb;color:#282b86;font:600 24px var(--sans);box-shadow:0 0 0 26px rgba(255,255,255,.13)}
 .case-preview--echo span{position:absolute;padding:12px 16px;border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.12);font:500 10px var(--mono)}
@@ -119,7 +119,7 @@
 .case-preview--phones img{max-height:305px}
 .case-preview--booking{height:305px;min-height:305px}
 .case-preview--booking img{max-height:84%;object-fit:contain}
-.case-preview--booking img:first-child{width:64%;right:3%;top:4%}.case-preview--booking img:last-child{width:54%;left:2%;bottom:2%}
+.case-preview--booking img:first-child{width:76%;right:-2%;top:5%}.case-preview--booking img:last-child{width:52%;left:-2%;bottom:-2%}
 .case-card::after{display:none}
 @media(max-width:1120px){.case-list{padding-inline:34px}.case-card{grid-template-columns:38px minmax(410px,1.08fr) minmax(300px,.92fr) 38px;column-gap:30px}.case-card-head{padding-top:36px}.case-card .case-copy h3{font-size:62px}.case-card .case-thesis{padding:0;font-size:16px}.case-card .case-action{margin:22px 0 34px}.case-card-visual{min-height:360px;padding:40px 46px;grid-template-columns:.78fr 1.22fr}.case-preview{min-height:270px}.case-preview--booking{height:270px;min-height:270px}}
 @media(max-width:760px){.case-section>.section-intro{padding-bottom:34px}.case-list{padding:0 20px 82px;gap:22px}.case-card{display:block}.case-card-head{display:block;padding:24px 24px 0}.case-card .case-number{margin:0 0 10px}.case-card .case-meta{max-width:24ch;text-align:left}.case-card .case-copy{display:block;padding:0 24px}.case-card .case-copy h3{padding:16px 0 0;margin:0;font-size:52px;overflow-wrap:normal}.case-card .case-thesis{padding:0;margin:16px 0 0;font-size:16px}.case-card .case-action{margin:22px 0 30px}.case-card-visual{min-height:430px;padding:30px 26px;grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:22px}.case-card-visual strong{font-size:40px}.case-preview{min-height:250px}.case-preview--booking{height:250px;min-height:250px}}
