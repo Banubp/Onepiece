@@ -2,14 +2,16 @@ name: Validate live portfolio source
 
 on:
   push:
-    branches: [main]
+    branches: [main, gh-pages]
   workflow_dispatch:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-  group: pages
+  group: portfolio-pages-deployment
   cancel-in-progress: true
 
 jobs:
@@ -26,7 +28,27 @@ jobs:
       - name: Check internal asset references
         run: |
           grep -q 'class="hero-mascot"' index.html
-          grep -q 'assets/projects/nexa/home.png' index.html
-          grep -q 'assets/projects/booking/explorer-home.jpg' index.html
-          test "$(grep -o 'class="case-card' index.html | wc -l)" -eq 6
+          grep -q 'assets/projects/nexa/nexa-duo-transparent.png' index.html
+          grep -q 'assets/projects/booking/booking-macbook.webp' index.html
+          grep -q 'assets/projects/echo/echo-home-orchestration.svg' index.html
+          grep -q 'assets/projects/echo/echo-home-orchestration-mobile.svg' index.html
+          test "$(grep -o 'class="case-card ' index.html | wc -l)" -eq 4
           test "$(grep -o 'class="project-tile' index.html | wc -l)" -eq 6
+
+  deploy:
+    needs: validate
+    if: github.ref == 'refs/heads/gh-pages'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Upload portfolio
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
