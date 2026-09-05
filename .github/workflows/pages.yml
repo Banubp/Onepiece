@@ -30,8 +30,10 @@ jobs:
           grep -q 'class="hero-mascot"' index.html
           grep -q 'assets/projects/nexa/nexa-duo-transparent.png' index.html
           grep -q 'assets/projects/booking/booking-macbook.webp' index.html
-          grep -q 'assets/projects/echo/echo-home-orchestration.svg' index.html
-          grep -q 'assets/projects/echo/echo-home-orchestration-mobile.svg' index.html
+          grep -q 'class="echo-home-workflow"' index.html
+          grep -q 'class="echo-architecture"' case-studies/echo.html
+          grep -q 'class="echo-learning-cycle"' case-studies/echo.html
+          grep -q 'class="echo-authority-graph"' case-studies/echo.html
           test "$(grep -o 'class="case-card ' index.html | wc -l)" -eq 4
           test "$(grep -o 'class="project-tile' index.html | wc -l)" -eq 6
 
