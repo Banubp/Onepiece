@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Echo coordinates one request on mobile</title>
+  <desc id="desc">One user intent flows through Echo into home, calendar, budget and commute agents, then returns approved options with evidence.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111454"/><stop offset="1" stop-color="#282b86"/></linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9294ff"/><stop offset="1" stop-color="#6265ed"/></linearGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#070824" flood-opacity=".34"/></filter>
+  </defs>
+  <rect width="600" height="900" rx="28" fill="url(#bg)"/>
+  <g fill="none" stroke="#aeb0ff" stroke-width="3" opacity=".55"><path d="M300 210v80M300 424v55M300 650v58"/><path d="M300 464 160 500M300 464 440 500M300 464 160 598M300 464 440 598"/></g>
+  <g filter="url(#s)">
+    <rect x="58" y="54" width="484" height="158" rx="22" fill="#f5f2eb"/>
+    <rect x="82" y="78" width="96" height="27" rx="14" fill="#e6e1ff"/>
+    <text x="130" y="97" fill="#4c4fc8" font-family="DM Mono, monospace" font-size="11" text-anchor="middle" letter-spacing="1">ONE INTENT</text>
+    <text x="82" y="139" fill="#171814" font-family="DM Sans, Arial, sans-serif" font-size="22" font-weight="700">“Plan our move before January.</text>
+    <text x="82" y="171" fill="#171814" font-family="DM Sans, Arial, sans-serif" font-size="22" font-weight="700">Keep it under £600.”</text>
+  </g>
+  <g filter="url(#s)">
+    <circle cx="300" cy="356" r="68" fill="url(#core)"/>
+    <path d="M274 348c16-23 37-23 52 0-15 23-36 23-52 0Z" fill="none" stroke="#fff" stroke-width="5"/><circle cx="300" cy="348" r="8" fill="#fff"/>
+    <text x="300" y="393" fill="#fff" font-family="DM Sans, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle">ECHO</text>
+  </g>
+  <g font-family="DM Sans, Arial, sans-serif" filter="url(#s)">
+    <g transform="translate(58 486)"><rect width="218" height="94" rx="17" fill="#fff" fill-opacity=".13" stroke="#fff" stroke-opacity=".32"/><text x="20" y="37" fill="#fff" font-size="17" font-weight="700">Home agent</text><text x="20" y="65" fill="#c8c9ff" font-size="12">Finds viable homes</text></g>
+    <g transform="translate(324 486)"><rect width="218" height="94" rx="17" fill="#fff" fill-opacity=".13" stroke="#fff" stroke-opacity=".32"/><text x="20" y="37" fill="#fff" font-size="17" font-weight="700">Calendar agent</text><text x="20" y="65" fill="#c8c9ff" font-size="12">Resolves schedules</text></g>
+    <g transform="translate(58 594)"><rect width="218" height="94" rx="17" fill="#fff" fill-opacity=".13" stroke="#fff" stroke-opacity=".32"/><text x="20" y="37" fill="#fff" font-size="17" font-weight="700">Budget agent</text><text x="20" y="65" fill="#c8c9ff" font-size="12">Protects the £600 limit</text></g>
+    <g transform="translate(324 594)"><rect width="218" height="94" rx="17" fill="#fff" fill-opacity=".13" stroke="#fff" stroke-opacity=".32"/><text x="20" y="37" fill="#fff" font-size="17" font-weight="700">Commute agent</text><text x="20" y="65" fill="#c8c9ff" font-size="12">Tests real journeys</text></g>
+  </g>
+  <g filter="url(#s)">
+    <rect x="108" y="718" width="384" height="130" rx="22" fill="#f5f2eb"/>
+    <circle cx="151" cy="762" r="22" fill="#dcffe8"/><path d="m141 762 7 7 14-17" fill="none" stroke="#248552" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="187" y="755" fill="#4c4fc8" font-family="DM Mono, monospace" font-size="10" letter-spacing="1">HUMAN APPROVAL</text>
+    <text x="187" y="785" fill="#171814" font-family="DM Sans, Arial, sans-serif" font-size="21" font-weight="700">3 homes ready</text>
+    <text x="187" y="811" fill="#656761" font-family="DM Sans, Arial, sans-serif" font-size="13">One outcome, backed by evidence</text>
+  </g>
+  <text x="300" y="878" fill="#c8c9ff" font-family="DM Mono, monospace" font-size="10" text-anchor="middle" letter-spacing="1">ONE REQUEST → MANY AGENTS → ONE OUTCOME</text>
+</svg>

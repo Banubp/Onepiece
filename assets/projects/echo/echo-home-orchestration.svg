@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Echo turns one intent into coordinated action</title>
+  <desc id="desc">A user request enters Echo, splits into four accountable specialist agents, passes an approval gate, and returns one completed outcome with evidence.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111454"/>
+      <stop offset="1" stop-color="#282b86"/>
+    </linearGradient>
+    <linearGradient id="echo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8f91ff"/>
+      <stop offset="1" stop-color="#6265ed"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#070824" flood-opacity=".34"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#aeb0ff"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="760" rx="30" fill="url(#bg)"/>
+  <circle cx="604" cy="372" r="190" fill="#6e71ff" opacity=".09" filter="url(#glow)"/>
+  <g fill="none" stroke="#8c8ff4" stroke-width="2" opacity=".36">
+    <path d="M411 376C458 376 466 376 497 376" marker-end="url(#arrow)"/>
+    <path d="M647 313C707 235 750 199 817 177" marker-end="url(#arrow)"/>
+    <path d="M665 347C743 320 778 319 851 320" marker-end="url(#arrow)"/>
+    <path d="M665 402C741 428 779 433 851 438" marker-end="url(#arrow)"/>
+    <path d="M647 439C706 514 753 541 817 567" marker-end="url(#arrow)"/>
+    <path d="M1018 371C1061 371 1083 371 1119 371" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- One human intent -->
+  <g filter="url(#shadow)">
+    <rect x="68" y="276" width="343" height="200" rx="20" fill="#f5f2eb"/>
+    <rect x="92" y="300" width="88" height="28" rx="14" fill="#e6e1ff"/>
+    <text x="136" y="319" fill="#4c4fc8" font-family="DM Mono, monospace" font-size="12" text-anchor="middle" letter-spacing="1">ONE INTENT</text>
+    <text x="94" y="366" fill="#171814" font-family="DM Sans, Arial, sans-serif" font-size="23" font-weight="600">“Plan our move before January.</text>
+    <text x="94" y="398" fill="#171814" font-family="DM Sans, Arial, sans-serif" font-size="23" font-weight="600">Keep it under £600.”</text>
+    <circle cx="112" cy="437" r="12" fill="#4c4fc8"/>
+    <text x="136" y="442" fill="#656761" font-family="DM Mono, monospace" font-size="12">User states the outcome, not the steps</text>
+  </g>
+
+  <!-- Echo orchestrator -->
+  <g filter="url(#shadow)">
+    <circle cx="579" cy="376" r="94" fill="url(#echo)"/>
+    <circle cx="579" cy="376" r="71" fill="none" stroke="#fff" stroke-opacity=".28"/>
+    <path d="M546 367c20-30 48-30 68 0-20 30-48 30-68 0Z" fill="none" stroke="#fff" stroke-width="6"/>
+    <circle cx="580" cy="367" r="10" fill="#fff"/>
+    <text x="579" y="424" fill="#fff" font-family="DM Sans, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">ECHO</text>
+    <text x="579" y="447" fill="#fff" fill-opacity=".72" font-family="DM Mono, monospace" font-size="10" text-anchor="middle" letter-spacing="1">ORCHESTRATES</text>
+  </g>
+
+  <!-- Specialist agent cards -->
+  <g font-family="DM Sans, Arial, sans-serif" filter="url(#shadow)">
+    <g transform="translate(817 113)">
+      <rect width="201" height="126" rx="17" fill="#fff" fill-opacity=".12" stroke="#fff" stroke-opacity=".3"/>
+      <circle cx="31" cy="31" r="16" fill="#9fa1ff"/><path d="M24 32h14M27 27v10M35 27v10" stroke="#111454" stroke-width="2"/>
+      <text x="58" y="35" fill="#fff" font-size="17" font-weight="700">Home agent</text>
+      <text x="22" y="72" fill="#fff" fill-opacity=".7" font-size="13">Finds viable homes</text>
+      <text x="22" y="96" fill="#c8c9ff" font-family="DM Mono, monospace" font-size="10">12 SOURCES CHECKED</text>
+    </g>
+    <g transform="translate(851 257)">
+      <rect width="201" height="126" rx="17" fill="#fff" fill-opacity=".12" stroke="#fff" stroke-opacity=".3"/>
+      <circle cx="31" cy="31" r="16" fill="#9fa1ff"/><rect x="23" y="24" width="16" height="15" rx="2" fill="none" stroke="#111454" stroke-width="2"/><path d="M23 29h16" stroke="#111454" stroke-width="2"/>
+      <text x="58" y="35" fill="#fff" font-size="17" font-weight="700">Calendar agent</text>
+      <text x="22" y="72" fill="#fff" fill-opacity=".7" font-size="13">Resolves both schedules</text>
+      <text x="22" y="96" fill="#c8c9ff" font-family="DM Mono, monospace" font-size="10">3 CONFLICTS CLEARED</text>
+    </g>
+    <g transform="translate(851 401)">
+      <rect width="201" height="126" rx="17" fill="#fff" fill-opacity=".12" stroke="#fff" stroke-opacity=".3"/>
+      <circle cx="31" cy="31" r="16" fill="#9fa1ff"/><path d="M24 27h14v10H24zM27 24h8" fill="none" stroke="#111454" stroke-width="2"/>
+      <text x="58" y="35" fill="#fff" font-size="17" font-weight="700">Budget agent</text>
+      <text x="22" y="72" fill="#fff" fill-opacity=".7" font-size="13">Checks rent and bills</text>
+      <text x="22" y="96" fill="#c8c9ff" font-family="DM Mono, monospace" font-size="10">£600 LIMIT PROTECTED</text>
+    </g>
+    <g transform="translate(817 545)">
+      <rect width="201" height="126" rx="17" fill="#fff" fill-opacity=".12" stroke="#fff" stroke-opacity=".3"/>
+      <circle cx="31" cy="31" r="16" fill="#9fa1ff"/><path d="M31 22c-5 0-9 4-9 9 0 7 9 14 9 14s9-7 9-14c0-5-4-9-9-9Zm0 12a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" fill="#111454"/>
+      <text x="58" y="35" fill="#fff" font-size="17" font-weight="700">Commute agent</text>
+      <text x="22" y="72" fill="#fff" fill-opacity=".7" font-size="13">Tests real journey times</text>
+      <text x="22" y="96" fill="#c8c9ff" font-family="DM Mono, monospace" font-size="10">WORK + UNI VERIFIED</text>
+    </g>
+  </g>
+
+  <!-- Approval and single outcome -->
+  <g filter="url(#shadow)">
+    <rect x="1080" y="272" width="150" height="198" rx="22" fill="#f5f2eb"/>
+    <circle cx="1155" cy="316" r="24" fill="#dcffe8"/>
+    <path d="m1144 316 8 8 15-18" fill="none" stroke="#248552" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1155" y="360" fill="#4c4fc8" font-family="DM Mono, monospace" font-size="10" text-anchor="middle" letter-spacing="1">APPROVAL GATE</text>
+    <text x="1155" y="393" fill="#171814" font-family="DM Sans, Arial, sans-serif" font-size="19" font-weight="700" text-anchor="middle">3 homes ready</text>
+    <text x="1155" y="417" fill="#656761" font-family="DM Sans, Arial, sans-serif" font-size="12" text-anchor="middle">with evidence</text>
+    <rect x="1105" y="439" width="100" height="9" rx="5" fill="#d7d2ff"/>
+  </g>
+
+  <g font-family="DM Mono, monospace" font-size="10" letter-spacing="1">
+    <text x="579" y="690" fill="#c8c9ff" text-anchor="middle">ONE REQUEST → PARALLEL WORK → HUMAN APPROVAL → ONE COORDINATED OUTCOME</text>
+  </g>
+</svg>
