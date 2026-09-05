@@ -7,6 +7,12 @@ on:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: portfolio-pages-deployment
+  cancel-in-progress: true
 
 jobs:
   validate:
@@ -28,3 +34,20 @@ jobs:
           grep -q 'assets/projects/echo/echo-home-orchestration-mobile.svg' index.html
           test "$(grep -o 'class="case-card ' index.html | wc -l)" -eq 4
           test "$(grep -o 'class="project-tile' index.html | wc -l)" -eq 6
+
+  deploy:
+    needs: validate
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Upload portfolio
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
