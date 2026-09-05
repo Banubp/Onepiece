@@ -2,7 +2,7 @@ name: Validate live portfolio source
 
 on:
   push:
-    branches: [main]
+    branches: [main, gh-pages]
   workflow_dispatch:
 
 permissions:
@@ -37,6 +37,7 @@ jobs:
 
   deploy:
     needs: validate
+    if: github.ref == 'refs/heads/gh-pages'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
