@@ -8,10 +8,6 @@ on:
 permissions:
   contents: read
 
-concurrency:
-  group: pages
-  cancel-in-progress: true
-
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -26,7 +22,9 @@ jobs:
       - name: Check internal asset references
         run: |
           grep -q 'class="hero-mascot"' index.html
-          grep -q 'assets/projects/nexa/home.png' index.html
-          grep -q 'assets/projects/booking/explorer-home.jpg' index.html
-          test "$(grep -o 'class="case-card' index.html | wc -l)" -eq 6
+          grep -q 'assets/projects/nexa/nexa-duo-transparent.png' index.html
+          grep -q 'assets/projects/booking/booking-macbook.webp' index.html
+          grep -q 'assets/projects/echo/echo-home-orchestration.svg' index.html
+          grep -q 'assets/projects/echo/echo-home-orchestration-mobile.svg' index.html
+          test "$(grep -o 'class="case-card ' index.html | wc -l)" -eq 4
           test "$(grep -o 'class="project-tile' index.html | wc -l)" -eq 6
