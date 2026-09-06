@@ -33,5 +33,9 @@ jobs:
           grep -q 'class="spine-forge-flow"' case-studies/spine.html
           grep -q 'class="spine-decision-path"' case-studies/spine.html
           grep -q 'class="spine-learning-loop"' case-studies/spine.html
+          grep -q '<h2>Audit output</h2>' case-studies/spine.html
+          grep -q '<h2>Learning architecture</h2>' case-studies/spine.html
+          ! grep -q 'Completion +19%' case-studies/spine.html
+          ! grep -q 'Failed predictions' case-studies/spine.html
           test "$(grep -o 'class="case-card ' index.html | wc -l)" -eq 4
           test "$(grep -o 'class="project-tile' index.html | wc -l)" -eq 6
