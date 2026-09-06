@@ -28,5 +28,10 @@ jobs:
           grep -q 'class="echo-architecture"' case-studies/echo.html
           grep -q 'class="echo-learning-cycle"' case-studies/echo.html
           grep -q 'class="echo-authority-graph"' case-studies/echo.html
+          grep -q 'class="spine-home-audit"' index.html
+          grep -q 'class="spine-architecture"' case-studies/spine.html
+          grep -q 'class="spine-forge-flow"' case-studies/spine.html
+          grep -q 'class="spine-decision-path"' case-studies/spine.html
+          grep -q 'class="spine-learning-loop"' case-studies/spine.html
           test "$(grep -o 'class="case-card ' index.html | wc -l)" -eq 4
           test "$(grep -o 'class="project-tile' index.html | wc -l)" -eq 6
