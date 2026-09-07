@@ -24,6 +24,11 @@ jobs:
           grep -q 'class="hero-mascot"' index.html
           grep -q 'assets/projects/nexa/nexa-duo-transparent.png' index.html
           grep -q 'assets/projects/booking/booking-macbook.webp' index.html
+          grep -q 'nexa-duo-transparent.png' case-studies/nexa.html
+          grep -q 'nexa-splash-transparent.png' case-studies/nexa.html
+          ! grep -q 'assets/projects/nexa/home.png' case-studies/nexa.html
+          ! grep -q 'assets/projects/nexa/safe-to-spend.png' case-studies/nexa.html
+          ! grep -q 'assets/projects/nexa/ai-coach.png' case-studies/nexa.html
           grep -q 'class="echo-home-workflow"' index.html
           grep -q 'class="echo-architecture"' case-studies/echo.html
           grep -q 'class="echo-learning-cycle"' case-studies/echo.html
