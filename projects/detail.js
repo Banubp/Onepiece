@@ -38,7 +38,7 @@ const projects = {
       "Accessible, touch-safe interaction",
     ],
     validation:
-      "The role, period and product reasoning can be shown. Original research artifacts, shipped screens and performance outcomes still need source confirmation.",
+      "The role, period and product reasoning can be shown. Original research artefacts, shipped screens and performance outcomes still need source confirmation.",
     reflection:
       "Designing belonging is less about putting communities on a screen and more about reducing uncertainty around the first step.",
     accent: "#f26545",
@@ -102,7 +102,7 @@ const projects = {
     platform: "Responsive web",
     thesis: "Turn a job gap into a next step.",
     summary:
-      "A career product connecting relevant opportunities with the skills needed to become ready for them.",
+      "A career product connecting relevant opportunities with the skills needed to pursue them confidently.",
     problem:
       "Listings describe requirements but rarely help candidates understand the gap between their current evidence and a desired role.",
     goal: "Translate role requirements into an inspectable skill path without presenting uncertain matching as objective truth.",
