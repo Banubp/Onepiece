@@ -239,6 +239,52 @@ sherlockCards.forEach(card => {
   card.addEventListener('focus', () => setMascot('wave', 750));
 });
 
+const sherlockGrid = document.querySelector('.sherlock-grid');
+if (sherlockGrid && sherlockCards.length) {
+  const mobileSherlock = window.matchMedia('(max-width: 540px)');
+  let sherlockFrame = 0;
+
+  sherlockCards.forEach((card, index) => {
+    card.style.setProperty('--stack-index', 10 + index);
+    card.style.setProperty('--stack-top', `${96 + Math.min(index, 3) * 7}px`);
+  });
+
+  const updateSherlockCard = () => {
+    sherlockFrame = 0;
+    if (!mobileSherlock.matches) {
+      sherlockCards.forEach(card => {
+        card.classList.remove('is-active');
+        card.style.removeProperty('--stack-depth');
+      });
+      return;
+    }
+
+    let activeIndex = 0;
+    sherlockCards.forEach((card, index) => {
+      const box = card.getBoundingClientRect();
+      const stickyTop = 96 + Math.min(index, 3) * 7;
+      if (box.top <= stickyTop + 12) activeIndex = index;
+    });
+
+    sherlockCards.forEach((card, index) => {
+      card.classList.toggle('is-active', index === activeIndex);
+      const depth = Math.min(Math.max(activeIndex - index, 0), 4);
+      card.style.setProperty('--stack-y', `${depth * -3}px`);
+      card.style.setProperty('--stack-scale', (1 - depth * 0.018).toFixed(3));
+      card.style.setProperty('--stack-opacity', (1 - depth * 0.08).toFixed(2));
+    });
+  };
+
+  const scheduleSherlockUpdate = () => {
+    if (!sherlockFrame) sherlockFrame = window.requestAnimationFrame(updateSherlockCard);
+  };
+
+  window.addEventListener('scroll', scheduleSherlockUpdate, {passive:true});
+  mobileSherlock.addEventListener('change', updateSherlockCard);
+  window.addEventListener('resize', scheduleSherlockUpdate, {passive:true});
+  updateSherlockCard();
+}
+
 document.querySelector('#contact-link').addEventListener('click', () => {
   lockedState = true;
   mascot.dataset.state = 'send';
